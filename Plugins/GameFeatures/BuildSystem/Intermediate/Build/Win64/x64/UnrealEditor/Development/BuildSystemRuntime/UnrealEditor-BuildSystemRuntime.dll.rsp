@@ -36,12 +36,8 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h.obj"
-"D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\BuildActor.cpp.obj"
+"D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\Module.BuildSystemRuntime.cpp.obj"
 "D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\BuildRuntimeComponent.cpp.obj"
-"D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\BuildSystemRuntimeModule.cpp.obj"
-"D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\BuildActor.gen.cpp.obj"
-"D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\BuildRuntimeComponent.gen.cpp.obj"
-"D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BuildSystemRuntime\BuildSystemRuntime.init.gen.cpp.obj"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Default.rc2.res"
 "D:\Documents\UnrealProjects\FrameworkSample\Plugins\slua_unreal\Library\Win64\lua.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"

@@ -21,7 +21,7 @@ void UBuildRuntimeComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
+	NS_SLUA::LuaState* ls = NS_SLUA::LuaState::get(GetWorld()->GetGameInstance());
 }
 
 

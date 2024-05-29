@@ -1,11 +1,13 @@
 local BuildEntity = {}
 
-function BuildEntity:BeginPlay()
+function BuildEntity:ReceiveBeginPlay()
+    self.Super:ReceiveBeginPlay()
     print("BuildEntity BeginPlay")
 end
 
-function BuildEntity:OnDestroy()
-    print("BuildEntity OnDestroy")
+function BuildEntity:ReceiveEndPlay(Reason)
+    self.Super:ReceiveEndPlay(Reason)
+    print("BuildEntity EndPlay")
 end
 
 return Class(nil, nil, BuildEntity)

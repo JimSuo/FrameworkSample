@@ -1,6 +1,6 @@
 local BuildRuntimeComponent = {}
 
-function BuildRuntimeComponent:BeginPlay()
+function BuildRuntimeComponent:ReceiveBeginPlay()
     print("BuildRuntimeComponent BeginPlay")
 end
 

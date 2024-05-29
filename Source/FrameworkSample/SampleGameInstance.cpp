@@ -8,7 +8,7 @@
 
 USampleGameInstance::USampleGameInstance() : LuaState(nullptr)
 {
-	if (HasAnyFlags(RF_ClassDefaultObject | RF_ArchetypeObject))
+	if (!HasAnyFlags(RF_ClassDefaultObject | RF_ArchetypeObject))
 	{
 		CreateLuaState();
 	}
@@ -21,8 +21,9 @@ void USampleGameInstance::Init()
 
 void USampleGameInstance::Shutdown()
 {
-	Super::Shutdown();
+	CloseLuaState();
 	
+	Super::Shutdown();
 }
 
 void USampleGameInstance::CreateLuaState()
@@ -33,29 +34,33 @@ void USampleGameInstance::CreateLuaState()
 	LuaState = new NS_SLUA::LuaState("SLuaMainState", this);
 	
 	// Core lua file
-	LuaState->setLoadFileDelegate([](const char* fn, FString& filepath)->TArray<uint8> {
-		// return FileUtils::SetScanPath(FPaths::ProjectContentDir() /= "Lua", fn, filepath);
 
-		IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-		FString path = FPaths::ProjectContentDir();
-		FString filename = UTF8_TO_TCHAR(fn);
-		path /= "Lua";
-		path /= filename.Replace(TEXT("."), TEXT("/"));
+	LuaState->setLoadFileDelegate(FileUtils::SetScanPath);
+	
+	/* LuaState->setLoadFileDelegate([](const char* fn, FString& filepath)->TArray<uint8> {
+		return FileUtils::SetScanPath(FPaths::ProjectDir(), fn, filepath);
 
-		TArray<uint8> Content;
-		TArray<FString> luaExts = { UTF8_TO_TCHAR(".lua"), UTF8_TO_TCHAR(".luac") };
-		for (auto& it : luaExts) {
-			auto fullPath = path + *it;
-
-			FFileHelper::LoadFileToArray(Content, *fullPath);
-			if (Content.Num() > 0) {
-				filepath = fullPath;
-				return MoveTemp(Content);
-			}
-		}
-
-		return MoveTemp(Content);
-	});
+		// IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
+		// FString path = FPaths::ProjectContentDir();
+		// FString filename = UTF8_TO_TCHAR(fn);
+		// path /= "Lua";
+		// path /= filename.Replace(TEXT("."), TEXT("/"));
+		//
+		// TArray<uint8> Content;
+		// TArray<FString> luaExts = { UTF8_TO_TCHAR(".lua"), UTF8_TO_TCHAR(".luac") };
+		// for (auto& it : luaExts) {
+		// 	auto fullPath = path + *it;
+		//
+		// 	FFileHelper::LoadFileToArray(Content, *fullPath);
+		// 	if (Content.Num() > 0) {
+		// 		filepath = fullPath;
+		// 		return MoveTemp(Content);
+		// 	}
+		// }
+		//
+		// return MoveTemp(Content);
+	});*/
+	
 	// // GameFeature lua file
 	// LuaState->setLoadGameFeatureFileDelegate([](const char* fn, FString& filepath)-> TArray<uint8>
 	// {

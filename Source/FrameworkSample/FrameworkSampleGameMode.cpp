@@ -38,6 +38,12 @@ APawn* AFrameworkSampleGameMode::SpawnDefaultPawnAtTransform_Implementation(ACon
 	return Super::SpawnDefaultPawnAtTransform_Implementation(NewPlayer, SpawnTransform);
 }
 
+void AFrameworkSampleGameMode::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
+
 void AFrameworkSampleGameMode::Logout(AController* Exiting)
 {
 	Super::Logout(Exiting);

@@ -8,7 +8,7 @@ public class FrameworkSample : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "slua_unreal" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "slua_unreal", "slua_profile", "ModelViewViewModel", "Slate", "SlateCore", "UMG", "GameplayTags", "GameFeatures"});
 		

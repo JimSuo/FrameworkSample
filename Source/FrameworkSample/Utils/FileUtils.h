@@ -33,12 +33,34 @@ public:
 	}
 
 	// Set scan path
-	static TArray<uint8> SetScanPath(const FString& InParentPath, const char* Fn, FString& FilePath)
+	static TArray<uint8> SetScanPath(const char* Fn, FString& FilePath)
 	{
 		IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
- 		FString Path = InParentPath;
+ 		FString Path;
 		FString Filename = UTF8_TO_TCHAR(Fn);
-		Path /= Filename.Replace(TEXT("."), TEXT("/"));
+		// 获取LuaFilePath前缀, 并根据前缀判断是否为插件或GameFeature
+		const auto& FirstMask = Filename[0];
+		if (FirstMask != '$' && FirstMask != '#')
+		{
+			Path = FPaths::ProjectContentDir() /= TEXT("Lua");
+			Path /= Filename.Replace(TEXT("."), TEXT("/"));	
+		}
+		// 插件(带有$标识前缀)
+		else if (FirstMask == '$')
+		{
+			// 移除标识
+			Filename.RemoveAt(0);
+			Path = FPaths::ProjectPluginsDir();
+			Path /= Filename.Replace(TEXT("."), TEXT("/"));
+		}
+		// GameFeature(带有#标识前缀)
+		else if (FirstMask == '#')
+		{
+			// 移除标识
+			Filename.RemoveAt(0);
+			Path = FPaths::ProjectPluginsDir() /= TEXT("GameFeatures");
+			Path /= Filename.Replace(TEXT("."), TEXT("/"));
+		}
 
 		TArray<uint8> Content;
 
