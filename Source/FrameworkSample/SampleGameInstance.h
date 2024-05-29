@@ -31,7 +31,7 @@ private:
 
 	// Lua初始化回调
 	void LuaStateInitCallback(NS_SLUA::lua_State* L);
-	
+
 	// Lua虚拟机对象
 	NS_SLUA::LuaState* LuaState;
 };

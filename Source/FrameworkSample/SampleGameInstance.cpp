@@ -3,7 +3,7 @@
 
 #include "SampleGameInstance.h"
 
-#include "Utils.h"
+#include "Utils/FileUtils.h"
 #include "Utils/LogUtils.h"
 
 USampleGameInstance::USampleGameInstance() : LuaState(nullptr)
@@ -17,7 +17,6 @@ USampleGameInstance::USampleGameInstance() : LuaState(nullptr)
 void USampleGameInstance::Init()
 {
 	Super::Init();
-	
 }
 
 void USampleGameInstance::Shutdown()
@@ -32,7 +31,10 @@ void USampleGameInstance::CreateLuaState()
 	// 确保LuaState为未初始化状态
 	CloseLuaState();
 	LuaState = new NS_SLUA::LuaState("SLuaMainState", this);
+	
+	// Core lua file
 	LuaState->setLoadFileDelegate([](const char* fn, FString& filepath)->TArray<uint8> {
+		// return FileUtils::SetScanPath(FPaths::ProjectContentDir() /= "Lua", fn, filepath);
 
 		IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
 		FString path = FPaths::ProjectContentDir();
@@ -54,6 +56,12 @@ void USampleGameInstance::CreateLuaState()
 
 		return MoveTemp(Content);
 	});
+	// // GameFeature lua file
+	// LuaState->setLoadGameFeatureFileDelegate([](const char* fn, FString& filepath)-> TArray<uint8>
+	// {
+	// 	return FileUtils::SetScanPath(FPaths::ProjectPluginsDir() /= "GameFeatures", fn, filepath);
+	// });
+	
 	LuaState->init();	
 }
 
@@ -69,6 +77,6 @@ void USampleGameInstance::CloseLuaState()
 
 void USampleGameInstance::LuaStateInitCallback(slua::lua_State* L)
 {
-	lua_pushcfunction(L, LogUtils::PrintLog);
+ 	lua_pushcfunction(L, LogUtils::PrintLog);
 	slua::lua_setglobal(L, "LogUtils::PrintLog");
 }

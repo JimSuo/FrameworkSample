@@ -10,8 +10,9 @@ public class FrameworkSample : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { "slua_unreal", "slua_profile" });
-
+		PrivateDependencyModuleNames.AddRange(new string[] { "slua_unreal", "slua_profile", "ModelViewViewModel", "Slate", "SlateCore", "UMG", "GameplayTags", "GameFeatures"});
+		
+		
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		

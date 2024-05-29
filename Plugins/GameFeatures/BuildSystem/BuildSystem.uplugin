@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "BuildSystem",
+	"Description": "A system that supports in-game construction",
+	"Category": "Game Features",
+	"CreatedBy": "SuoWei",
+	"CreatedByURL": "https://alidocs.dingtalk.com/i/nodes/bva6QBXJwadk2BALfvmgN6KDWn4qY5Pr",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": false,
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"ClientVersion": 2,
+	"Modules": [
+		{
+			"Name": "BuildSystemRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"ExplicitlyLoaded": true,
+	"BuiltInInitialFeatureState": "Registered"
+}

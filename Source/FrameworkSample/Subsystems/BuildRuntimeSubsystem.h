@@ -14,5 +14,6 @@ class FRAMEWORKSAMPLE_API UBuildRuntimeSubsystem : public UWorldSubsystem
 {
 	GENERATED_BODY()
 
-	
+public:
+	void StartBuild();
 };

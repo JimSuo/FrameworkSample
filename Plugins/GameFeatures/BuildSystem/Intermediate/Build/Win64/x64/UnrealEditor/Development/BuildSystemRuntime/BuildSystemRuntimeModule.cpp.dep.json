@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\private\\buildsystemruntimemodule.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\buildsystemruntime\\definitions.buildsystemruntime.h",
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\buildsystemruntimemodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

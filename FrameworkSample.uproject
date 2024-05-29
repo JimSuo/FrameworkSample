@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{7F6F8E1D-453D-7673-D70E-00943ACA0CB7}",
+	"EngineAssociation": "{6564399A-4F83-B89B-1114-64A81E050CCC}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -20,7 +20,8 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android"
+				"Android",
+				"VisionOS"
 			]
 		},
 		{
@@ -38,11 +39,29 @@
 			"SupportedTargetPlatforms": [
 				"Win64",
 				"Linux",
-				"Android"
+				"Android",
+				"VisionOS"
 			]
 		},
 		{
 			"Name": "ModelViewViewModel",
+			"Enabled": true
+		},
+		{
+			"Name": "SaveFileEditor",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/489bec9346e0467c95a16185f42ab7cb"
+		},
+		{
+			"Name": "GameFeatures",
+			"Enabled": true
+		},
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "BuildSystem",
 			"Enabled": true
 		}
 	],
