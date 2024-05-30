@@ -3,14 +3,13 @@
 
 #include "BuildActor.h"
 
-ABuildActor::ABuildActor()
+ABuildActor::ABuildActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = true;	
 }
 
 // Called when the game starts or when spawned
 void ABuildActor::BeginPlay()
 {
 	Super::BeginPlay();
-
 }

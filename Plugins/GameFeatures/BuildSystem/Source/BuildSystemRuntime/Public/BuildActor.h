@@ -13,7 +13,7 @@ class BUILDSYSTEMRUNTIME_API ABuildActor : public ALuaActor
 	GENERATED_BODY()
 
 public:
-	ABuildActor();
+	ABuildActor(const FObjectInitializer& ObjectInitializer);
 
 protected:
 	// Called when the game starts or when spawned

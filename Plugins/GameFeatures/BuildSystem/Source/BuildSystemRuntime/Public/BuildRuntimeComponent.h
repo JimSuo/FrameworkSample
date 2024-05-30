@@ -14,7 +14,9 @@ class BUILDSYSTEMRUNTIME_API UBuildRuntimeComponent : public ULuaActorComponent
 
 public:
 	// Sets default values for this component's properties
-	UBuildRuntimeComponent();
+	UBuildRuntimeComponent(const FObjectInitializer& ObjectInitializer);
+
+	virtual FString GetLuaFilePath_Implementation() const override;
 
 protected:
 	// Called when the game starts

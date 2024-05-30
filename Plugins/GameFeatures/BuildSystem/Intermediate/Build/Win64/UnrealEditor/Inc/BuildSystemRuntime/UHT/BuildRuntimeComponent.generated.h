@@ -31,7 +31,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UBuildRuntimeComponent); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBuildRuntimeComponent); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UBuildRuntimeComponent) \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBuildRuntimeComponent) \
 	NO_API virtual ~UBuildRuntimeComponent();
 
 

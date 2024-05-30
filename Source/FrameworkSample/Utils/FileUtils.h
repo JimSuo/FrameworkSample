@@ -32,38 +32,38 @@ public:
 		return nullptr;
 	}
 
-	// Set scan path
-	static TArray<uint8> SetScanPath(const char* Fn, FString& FilePath)
+	/**
+	 * @brief 加载Lua文件
+	 * @param InFn Lua对象的LuaFilePath 
+	 * @param OutFilePath Lua脚本的绝对路径 
+	 * @return LuaContent 
+	 */
+	static TArray<uint8> LoadLuaFile(const char* InFn, FString& OutFilePath)
 	{
-		IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
- 		FString Path;
-		FString Filename = UTF8_TO_TCHAR(Fn);
+		// TODO::Platform related, need remove?
+		// IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
+
+		// 文件名, 即LuaFilePath
+		FString Filename = UTF8_TO_TCHAR(InFn);
 		// 获取LuaFilePath前缀, 并根据前缀判断是否为插件或GameFeature
 		const auto& FirstMask = Filename[0];
-		if (FirstMask != '$' && FirstMask != '#')
+		FString Path;
+		// 项目内的Lua脚本(不带有$标识前缀)
+		if (FirstMask != '$')
 		{
 			Path = FPaths::ProjectContentDir() /= TEXT("Lua");
-			Path /= Filename.Replace(TEXT("."), TEXT("/"));	
 		}
-		// 插件(带有$标识前缀)
-		else if (FirstMask == '$')
+		// 插件/GameFeature(带有$标识前缀)
+		else
 		{
 			// 移除标识
 			Filename.RemoveAt(0);
 			Path = FPaths::ProjectPluginsDir();
-			Path /= Filename.Replace(TEXT("."), TEXT("/"));
 		}
-		// GameFeature(带有#标识前缀)
-		else if (FirstMask == '#')
-		{
-			// 移除标识
-			Filename.RemoveAt(0);
-			Path = FPaths::ProjectPluginsDir() /= TEXT("GameFeatures");
-			Path /= Filename.Replace(TEXT("."), TEXT("/"));
-		}
-
+		// 路径拼接
+		Path /= Filename.Replace(TEXT("."), TEXT("/"));
+		
 		TArray<uint8> Content;
-
 		// 遍历添加 .lua & .luac 后缀
 		TArray<FString> LuaExts = {UTF8_TO_TCHAR(".lua"), UTF8_TO_TCHAR(".luac")};
 		for (auto& It : LuaExts)
@@ -74,7 +74,7 @@ public:
 			FFileHelper::LoadFileToArray(Content, *FullPath);
 			if (Content.Num() > 0)
 			{
-				FilePath = FullPath;
+				OutFilePath = FullPath;
 				return MoveTemp(Content);
 			}
 		}

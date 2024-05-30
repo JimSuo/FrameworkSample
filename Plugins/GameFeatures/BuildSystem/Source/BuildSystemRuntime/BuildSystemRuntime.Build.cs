@@ -28,6 +28,7 @@ public class BuildSystemRuntime : ModuleRules
 				"Core",
 				"slua_unreal",
 				"slua_profile",
+				"FrameworkSample",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

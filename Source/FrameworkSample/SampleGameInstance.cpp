@@ -35,7 +35,7 @@ void USampleGameInstance::CreateLuaState()
 	
 	// Core lua file
 
-	LuaState->setLoadFileDelegate(FileUtils::SetScanPath);
+	LuaState->setLoadFileDelegate(FileUtils::LoadLuaFile);
 	
 	/* LuaState->setLoadFileDelegate([](const char* fn, FString& filepath)->TArray<uint8> {
 		return FileUtils::SetScanPath(FPaths::ProjectDir(), fn, filepath);

@@ -33,6 +33,7 @@ struct Z_Construct_UClass_UBuildRuntimeComponent_Statics
 		{ "ClassGroupNames", "Custom" },
 		{ "IncludePath", "BuildRuntimeComponent.h" },
 		{ "ModuleRelativePath", "Public/BuildRuntimeComponent.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -81,10 +82,10 @@ UBuildRuntimeComponent::~UBuildRuntimeComponent() {}
 struct Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_BuildRuntimeComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBuildRuntimeComponent, UBuildRuntimeComponent::StaticClass, TEXT("UBuildRuntimeComponent"), &Z_Registration_Info_UClass_UBuildRuntimeComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuildRuntimeComponent), 2480659241U) },
+		{ Z_Construct_UClass_UBuildRuntimeComponent, UBuildRuntimeComponent::StaticClass, TEXT("UBuildRuntimeComponent"), &Z_Registration_Info_UClass_UBuildRuntimeComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuildRuntimeComponent), 2787426129U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_BuildRuntimeComponent_h_3127895835(TEXT("/Script/BuildSystemRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_BuildRuntimeComponent_h_40210673(TEXT("/Script/BuildSystemRuntime"),
 	Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_BuildRuntimeComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_BuildRuntimeComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
