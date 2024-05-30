@@ -17,6 +17,9 @@ class SLUA_UNREAL_API ILuaOverriderInterface
     GENERATED_BODY()
 
 public:
+    // 获取GameFeatureLuaFilePath
+    UFUNCTION(BlueprintNativeEvent)
+        FString GetGameFeatureLuaFilePath();
     UFUNCTION(BlueprintNativeEvent)
         FString GetLuaFilePath() const;
 

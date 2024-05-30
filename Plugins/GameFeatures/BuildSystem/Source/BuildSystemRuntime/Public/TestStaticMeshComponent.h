@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "LuaStaticMeshComponent.h"
+#include "FrameworkSample/Macro/GameFeatureHelperMacro.h"
 #include "TestStaticMeshComponent.generated.h"
 
 /**
@@ -16,5 +17,5 @@ class BUILDSYSTEMRUNTIME_API UTestStaticMeshComponent : public ULuaStaticMeshCom
 	
 	UTestStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
 
-	virtual FString GetLuaFilePath_Implementation() const override;
+	GET_GAME_FEATURE_LUA_PATH(BuildSystem)
 };

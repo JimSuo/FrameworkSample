@@ -15,12 +15,6 @@ UBuildRuntimeComponent::UBuildRuntimeComponent(const FObjectInitializer& ObjectI
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
-FString UBuildRuntimeComponent::GetLuaFilePath_Implementation() const
-{
-	return CONSTRUCT_GAME_FEATURE_LUA_PATH(BuildSystem);
-}
-
-
 // Called when the game starts
 void UBuildRuntimeComponent::BeginPlay()
 {

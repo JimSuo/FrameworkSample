@@ -1022,9 +1022,34 @@ namespace NS_SLUA
     FString LuaOverrider::getLuaFilePath(UObject* obj, UClass* cls, bool bCDOLua, bool& bHookInstancedObj)
     {
         bHookInstancedObj = false;
+        // GetGameFeatureLuaFilePath函数
+        const FString GET_GF_LUA_FILE_FUNC_NAME = TEXT("GetGameFeatureLuaFilePath");
+        UFunction* gfFunc = cls->FindFunctionByName(FName(*GET_GF_LUA_FILE_FUNC_NAME));
+        FString luaFilePath;
+        if (gfFunc->GetNativeFunc())
+        {
+            UObject* defaultObject = cls->GetDefaultObject();
+            defaultObject->ProcessEvent(gfFunc, &luaFilePath);
+
+            if (!bCDOLua)
+            {
+                FString instanceFilePath;
+                obj->UObject::ProcessEvent(gfFunc, &instanceFilePath);
+                if (!instanceFilePath.IsEmpty() && instanceFilePath != luaFilePath)
+                {
+                    bHookInstancedObj = true;
+                    luaFilePath = MoveTemp(instanceFilePath);
+                }
+            }
+        }
+        if (luaFilePath.IsEmpty() == false)
+        {
+            return MoveTemp(luaFilePath);
+        }
+        
+        // GetLuaFilePath函数
         const FString GET_LUA_FILE_FUNC_NAME = TEXT("GetLuaFilePath");
         UFunction* func = cls->FindFunctionByName(FName(*GET_LUA_FILE_FUNC_NAME));
-        FString luaFilePath;
         if (func->GetNativeFunc())
         {
             UObject* defaultObject = cls->GetDefaultObject();

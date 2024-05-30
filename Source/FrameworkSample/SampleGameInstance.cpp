@@ -31,42 +31,10 @@ void USampleGameInstance::CreateLuaState()
 	NS_SLUA::LuaState::onInitEvent.AddUObject(this, &USampleGameInstance::LuaStateInitCallback);
 	// 确保LuaState为未初始化状态
 	CloseLuaState();
+	// 创建Lua虚拟机
 	LuaState = new NS_SLUA::LuaState("SLuaMainState", this);
-	
 	// Core lua file
-
 	LuaState->setLoadFileDelegate(FileUtils::LoadLuaFile);
-	
-	/* LuaState->setLoadFileDelegate([](const char* fn, FString& filepath)->TArray<uint8> {
-		return FileUtils::SetScanPath(FPaths::ProjectDir(), fn, filepath);
-
-		// IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
-		// FString path = FPaths::ProjectContentDir();
-		// FString filename = UTF8_TO_TCHAR(fn);
-		// path /= "Lua";
-		// path /= filename.Replace(TEXT("."), TEXT("/"));
-		//
-		// TArray<uint8> Content;
-		// TArray<FString> luaExts = { UTF8_TO_TCHAR(".lua"), UTF8_TO_TCHAR(".luac") };
-		// for (auto& it : luaExts) {
-		// 	auto fullPath = path + *it;
-		//
-		// 	FFileHelper::LoadFileToArray(Content, *fullPath);
-		// 	if (Content.Num() > 0) {
-		// 		filepath = fullPath;
-		// 		return MoveTemp(Content);
-		// 	}
-		// }
-		//
-		// return MoveTemp(Content);
-	});*/
-	
-	// // GameFeature lua file
-	// LuaState->setLoadGameFeatureFileDelegate([](const char* fn, FString& filepath)-> TArray<uint8>
-	// {
-	// 	return FileUtils::SetScanPath(FPaths::ProjectPluginsDir() /= "GameFeatures", fn, filepath);
-	// });
-	
 	LuaState->init();	
 }
 
