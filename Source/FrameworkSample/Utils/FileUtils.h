@@ -64,7 +64,7 @@ public:
 		Path /= Filename.Replace(TEXT("."), TEXT("/"));
 		
 		TArray<uint8> Content;
-		// 遍历添加 .lua & .luac 后缀
+		// 遍历拼接 .lua & .luac 后缀
 		TArray<FString> LuaExts = {UTF8_TO_TCHAR(".lua"), UTF8_TO_TCHAR(".luac")};
 		for (auto& It : LuaExts)
 		{
