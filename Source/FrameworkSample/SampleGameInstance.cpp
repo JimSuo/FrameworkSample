@@ -26,6 +26,11 @@ void USampleGameInstance::Shutdown()
 	Super::Shutdown();
 }
 
+slua::LuaState* USampleGameInstance::GetLuaState() const
+{
+	return LuaState;
+}
+
 void USampleGameInstance::CreateLuaState()
 {
 	NS_SLUA::LuaState::onInitEvent.AddUObject(this, &USampleGameInstance::LuaStateInitCallback);

@@ -1,3 +1,9 @@
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildActor.h
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildActorData.h
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildDisplayInfoData.h
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildInfoData.h
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildMaterialInfoData.h
 D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildRuntimeComponent.h
 D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\TestStaticMeshComponent.h
-D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\BuildActor.h
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\Subsystems\BuildRuntimeSubsystem.h
+D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public\Subsystems\BuildSerializationSubsystem.h

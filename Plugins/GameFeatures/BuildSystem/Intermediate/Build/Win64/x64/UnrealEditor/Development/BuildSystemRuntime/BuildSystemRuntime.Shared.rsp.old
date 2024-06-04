@@ -291,6 +291,9 @@
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BuildSystemRuntime\UHT"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source\BuildSystemRuntime\Public"
+/I "D:\Documents\UnrealProjects\FrameworkSample\Intermediate\Build\Win64\UnrealEditor\Inc\FrameworkSample\UHT"
+/I "D:\Documents\UnrealProjects\FrameworkSample\Source"
+/I "D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkSample\Public"
 /external:W0
 /external:I "ThirdParty\LibTiff\Source\Win64"
 /external:I "ThirdParty\LibTiff\Source"

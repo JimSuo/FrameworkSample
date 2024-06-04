@@ -12,3 +12,15 @@ FString ULuaWorldSubsystem::GetLuaFilePath_Implementation() const
 {
 	return LuaFilePath;
 }
+
+void ULuaWorldSubsystem::Initialize(FSubsystemCollectionBase& Collection)
+{
+	Super::Initialize(Collection);
+	OnInitialize();
+}
+
+void ULuaWorldSubsystem::Deinitialize()
+{
+	Super::Deinitialize();
+	OnDeinitialize();
+}

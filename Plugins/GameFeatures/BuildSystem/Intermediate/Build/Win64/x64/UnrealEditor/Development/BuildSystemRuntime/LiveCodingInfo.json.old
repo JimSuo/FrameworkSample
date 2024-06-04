@@ -2,13 +2,21 @@
 	"RemapUnityFiles": 
 	{
 		"Module.BuildSystemRuntime.cpp.obj": [
-			"BuildActor.cpp.obj",
-			"BuildSystemRuntimeModule.cpp.obj",
 			"BuildActor.gen.cpp.obj",
+			"BuildMaterialInfoData.gen.cpp.obj",
 			"BuildRuntimeComponent.gen.cpp.obj",
-			"BuildSystemRuntime.init.gen.cpp.obj",
+			"BuildRuntimeSubsystem.gen.cpp.obj",
+			"BuildSerializationSubsystem.gen.cpp.obj",
 			"TestStaticMeshComponent.gen.cpp.obj",
+			"BuildActor.cpp.obj",
 			"BuildRuntimeComponent.cpp.obj",
+			"BuildSystemRuntimeModule.cpp.obj",
+			"BuildActorData.gen.cpp.obj",
+			"BuildDisplayInfoData.gen.cpp.obj",
+			"BuildInfoData.gen.cpp.obj",
+			"BuildSystemRuntime.init.gen.cpp.obj",
+			"BuildRuntimeSubsystem.cpp.obj",
+			"BuildSerializationSubsystem.cpp.obj",
 			"TestStaticMeshComponent.cpp.obj"
 		]
 	}

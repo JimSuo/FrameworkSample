@@ -70,7 +70,6 @@
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\source\\slua_unreal\\public\\luaactorcomponent.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luaactorcomponent.generated.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\buildruntimecomponent.generated.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\buildsystemruntime.init.gen.cpp",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\teststaticmeshcomponent.gen.cpp",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\teststaticmeshcomponent.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\source\\slua_unreal\\public\\luastaticmeshcomponent.h",
@@ -80,8 +79,7 @@
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\private\\buildactor.cpp",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\private\\buildruntimecomponent.cpp",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\private\\buildsystemruntimemodule.cpp",
-            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\buildsystemruntimemodule.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\private\\teststaticmeshcomponent.cpp"
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\buildsystemruntimemodule.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

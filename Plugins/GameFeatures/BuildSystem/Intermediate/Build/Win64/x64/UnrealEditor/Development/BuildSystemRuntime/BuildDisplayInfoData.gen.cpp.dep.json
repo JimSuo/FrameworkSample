@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\builddisplayinfodata.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\buildsystemruntime\\definitions.buildsystemruntime.h",
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\builddisplayinfodata.h",
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\buildmaterialinfodata.h",
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\buildmaterialinfodata.generated.h",
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\builddisplayinfodata.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

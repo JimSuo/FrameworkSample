@@ -7,7 +7,5 @@
 
 UTestStaticMeshComponent::UTestStaticMeshComponent(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
-{
-	FString test = "";
-	FName testName = UGameplayStatics::GetName(); 
+{ 
 }
