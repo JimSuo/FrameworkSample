@@ -11,6 +11,7 @@ public:
 	virtual void DrawData(APlayerController* OwnerPC, FGameplayDebuggerCanvasContext& CanvasContext) override;
 	virtual FDebugRenderSceneProxy* CreateDebugSceneProxy(const UPrimitiveComponent* InComponent, FDebugDrawDelegateHelper*& OutDelegateHelper) override;
 
+	BUILDSYSTEMRUNTIME_API static bool bRegistered;
 	BUILDSYSTEMRUNTIME_API static TSharedRef<FGameplayDebuggerCategory> MakeInstance();
 
 	// BuildSystem的信息类

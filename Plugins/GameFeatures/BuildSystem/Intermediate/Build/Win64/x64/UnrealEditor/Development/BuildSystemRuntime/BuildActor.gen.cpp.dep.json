@@ -62,8 +62,6 @@
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\source\\slua_unreal\\public\\luaoverriderinterface.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\source\\slua_unreal\\public\\luacppbindingpost.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luaoverriderinterface.generated.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\source\\frameworkgameplaydebugger\\interface\\ongameplaydebugger.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\intermediate\\build\\win64\\unrealeditor\\inc\\frameworkgameplaydebugger\\uht\\ongameplaydebugger.generated.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luaactor.generated.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\buildactor.generated.h"
         ],

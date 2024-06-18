@@ -2,10 +2,10 @@
 
 // 添加
 
-#define ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(className)\
-	if (!OnGameplayDebugger_Implementation().IsEmpty())\
+#define ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(className, funcName)\
+	if (!K2_OnGameplayDebugger().IsEmpty())\
 	{\
-		FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("%s.%s.%d"), TEXT(#className), TEXT("OnGameplayDebugger_Implementation"), GetUniqueID())).BindUObject(this, &className::OnGameplayDebugger_Implementation);\
+		FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("%s.%s.%d"), TEXT(#className), TEXT(#funcName), GetUniqueID())).BindUObject(this, &className::funcName);\
 	}\
 		
 #define ADD_GAMEPLAY_DEBUG_INFO_UOBJECT_WITH_OBJECT(object, className, funcName)\
@@ -14,10 +14,11 @@
 	FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("%s.%s.%d"), TEXT(#className), lambdaTag, GetUniqueID())).BindLambda([this]()-> TArray<FString>lambdaContent);
 
 // 移除
-#define REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(className)\
-	if (!OnGameplayDebugger_Implementation().IsEmpty())\
+
+#define REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(className, funcName)\
+	if (!K2_OnGameplayDebugger().IsEmpty())\
 	{\
-		FGameplayDebuggerCategory_Framework::RemoveOnCollectData(FString::Printf(TEXT("%s.%s.%d"), TEXT(#className), TEXT("OnGameplayDebugger_Implementation"), GetUniqueID()));\
+		FGameplayDebuggerCategory_Framework::RemoveOnCollectData(FString::Printf(TEXT("%s.%s.%d"), TEXT(#className), TEXT(#funcName), GetUniqueID()));\
 	}
 #define REMOVE_GAMEPLAY_DEBUG_INFO_UOBJECT_WITH_OBJECT(object, className, funcName)\
 	FGameplayDebuggerCategory_Framework::RemoveOnCollectData(FString::Printf(TEXT("%s.%s.%d"), TEXT(#className), TEXT(#funcName), object->GetUniqueID()));

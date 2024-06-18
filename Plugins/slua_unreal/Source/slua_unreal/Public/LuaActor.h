@@ -3,13 +3,12 @@
 #include "CoreMinimal.h"
 #include "LuaNetSerialization.h"
 #include "LuaOverriderInterface.h"
-#include "FrameworkGameplayDebugger/Interface/OnGameplayDebugger.h"
 #include "GameFramework/Actor.h"
 
 #include "LuaActor.generated.h"
 
 UCLASS(BlueprintType, Blueprintable)
-class SLUA_UNREAL_API ALuaActor : public AActor, public ILuaOverriderInterface, public IOnGameplayDebugger
+class SLUA_UNREAL_API ALuaActor : public AActor, public ILuaOverriderInterface
 {
     GENERATED_UCLASS_BODY()
 
@@ -30,8 +29,6 @@ public:
 
     UFUNCTION(BlueprintNativeEvent)
     TArray<FString> K2_OnGameplayDebugger();
-    
-    virtual TArray<FString> OnGameplayDebugger_Implementation() override;
     
     virtual void BeginPlay() override;
     virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;

@@ -18,16 +18,11 @@ TArray<FString> ALuaActor::K2_OnGameplayDebugger_Implementation()
     return Arr;
 }
 
-TArray<FString> ALuaActor::OnGameplayDebugger_Implementation()
-{
-    return K2_OnGameplayDebugger();
-}
-
 void ALuaActor::BeginPlay()
 {
     Super::BeginPlay();
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-    ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ALuaActor)
+    ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ALuaActor, K2_OnGameplayDebugger)
 #endif
 }
 
@@ -40,7 +35,7 @@ void ALuaActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
         UnRegistLuaTick();
     }
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-    REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ALuaActor)
+    REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ALuaActor, K2_OnGameplayDebugger)
 #endif
 }
 

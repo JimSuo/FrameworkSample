@@ -19,7 +19,8 @@
 #include "LuaUserWidget.generated.h"
 
 UCLASS()
-class SLUA_UNREAL_API ULuaUserWidget : public UUserWidget, public ILuaOverriderInterface {
+class SLUA_UNREAL_API ULuaUserWidget : public UUserWidget, public ILuaOverriderInterface
+{
     GENERATED_BODY()
 
 public:
@@ -28,6 +29,12 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "slua")
     FString LuaFilePath;
 
+    UFUNCTION(BlueprintNativeEvent)
+    TArray<FString> K2_OnGameplayDebugger();
+
+    virtual void NativeConstruct() override;
+    virtual void NativeDestruct() override;
+    
     virtual bool Initialize() override;
     virtual void BeginDestroy() override;
 

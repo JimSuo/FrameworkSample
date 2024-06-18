@@ -2,6 +2,8 @@
 
 #include "DecorationComponent.h"
 
+bool FGameplayDebuggerCategory_BuildSystem::bRegistered = false;
+
 FGameplayDebuggerCategory_BuildSystem::FGameplayDebuggerCategory_BuildSystem()
 {
 	SetDataPackReplication(&BuildSystemDebugData);
