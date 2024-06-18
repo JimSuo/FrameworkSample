@@ -64,16 +64,7 @@
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luaoverriderinterface.generated.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luastaticmeshcomponent.generated.h",
             "d:\\documents\\unrealprojects\\frameworksample\\source\\frameworksample\\macro\\gamefeaturehelpermacro.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\teststaticmeshcomponent.generated.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dialoguetypes.generated.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
-            "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h"
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\teststaticmeshcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

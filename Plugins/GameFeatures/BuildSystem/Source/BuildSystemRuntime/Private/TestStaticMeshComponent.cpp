@@ -2,10 +2,20 @@
 
 
 #include "TestStaticMeshComponent.h"
-
-#include "Kismet/GameplayStatics.h"
+using namespace slua;
 
 UTestStaticMeshComponent::UTestStaticMeshComponent(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
-{ 
+{
+	REG_EXTENSION_METHOD(UTestStaticMeshComponent, "LuaCallCppFuncTest", &UTestStaticMeshComponent::LuaCallCppFuncTest)
+}
+
+void UTestStaticMeshComponent::LuaCallCppFuncTest()
+{
+	UE_LOG(LogTemp, Warning, TEXT("UBuildRuntimeComponent::LuaCallCppFuncTest"));
+}
+
+void UTestStaticMeshComponent::LuaCallTest_Implementation()
+{
+	UE_LOG(LogTemp, Warning, TEXT("UBuildRuntimeComponent::LuaCallTest"));
 }

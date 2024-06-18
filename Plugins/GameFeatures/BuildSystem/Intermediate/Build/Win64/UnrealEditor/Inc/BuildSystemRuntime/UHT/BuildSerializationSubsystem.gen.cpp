@@ -6,7 +6,6 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "BuildSystemRuntime/Public/Subsystems/BuildSerializationSubsystem.h"
-#include "Runtime/Engine/Classes/Engine/LocalPlayer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBuildSerializationSubsystem() {}
 
@@ -31,10 +30,13 @@ struct Z_Construct_UClass_UBuildSerializationSubsystem_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * \xe5\xbb\xba\xe9\x80\xa0\xe5\xba\x8f\xe5\x88\x97\xe5\x8c\x96\xe5\xad\x90\xe7\xb3\xbb\xe7\xbb\x9f\n */" },
 #endif
 		{ "IncludePath", "Subsystems/BuildSerializationSubsystem.h" },
 		{ "ModuleRelativePath", "Public/Subsystems/BuildSerializationSubsystem.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xbb\xba\xe9\x80\xa0\xe5\xba\x8f\xe5\x88\x97\xe5\x8c\x96\xe5\xad\x90\xe7\xb3\xbb\xe7\xbb\x9f" },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -84,10 +86,10 @@ UBuildSerializationSubsystem::~UBuildSerializationSubsystem() {}
 struct Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildSerializationSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBuildSerializationSubsystem, UBuildSerializationSubsystem::StaticClass, TEXT("UBuildSerializationSubsystem"), &Z_Registration_Info_UClass_UBuildSerializationSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuildSerializationSubsystem), 340362035U) },
+		{ Z_Construct_UClass_UBuildSerializationSubsystem, UBuildSerializationSubsystem::StaticClass, TEXT("UBuildSerializationSubsystem"), &Z_Registration_Info_UClass_UBuildSerializationSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuildSerializationSubsystem), 2787392136U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildSerializationSubsystem_h_202526914(TEXT("/Script/BuildSystemRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildSerializationSubsystem_h_2743586950(TEXT("/Script/BuildSystemRuntime"),
 	Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildSerializationSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildSerializationSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

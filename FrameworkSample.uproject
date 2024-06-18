@@ -11,6 +11,16 @@
 			"AdditionalDependencies": [
 				"Engine"
 			]
+		},
+		{
+			"Name": "FrameworkGameplayDebugger",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "FrameworkGameplayDebugger",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
@@ -62,6 +72,10 @@
 		},
 		{
 			"Name": "BuildSystem",
+			"Enabled": true
+		},
+		{
+			"Name": "TAPython",
 			"Enabled": true
 		}
 	],

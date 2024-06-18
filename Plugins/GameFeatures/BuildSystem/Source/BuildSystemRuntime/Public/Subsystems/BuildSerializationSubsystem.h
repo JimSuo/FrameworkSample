@@ -9,7 +9,7 @@
 #include "BuildSerializationSubsystem.generated.h"
 
 /**
- * 
+ * 建造序列化子系统
  */
 UCLASS()
 class BUILDSYSTEMRUNTIME_API UBuildSerializationSubsystem : public ULuaWorldSubsystem

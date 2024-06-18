@@ -3,6 +3,9 @@
 
 #include "BuildEntity.h"
 
+#include "FrameworkGameplayDebugger/Macro/GameplayDebuggerHelperMacro.h"
+#include "FrameworkGameplayDebugger/Public/GameplayDebuggerCategory_Framework.h"
+
 
 // Sets default values
 ABuildEntity::ABuildEntity()
@@ -11,11 +14,28 @@ ABuildEntity::ABuildEntity()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+// TArray<FString> ABuildEntity::OnGameplayDebugger_Implementation()
+// {
+// 	TArray<FString> Infos;
+// 	Infos.Add(FString::Printf(TEXT("{white}ActorLocation : {green}%s"), *GetActorLocation().ToString()));
+// 	Infos.Add(FString::Printf(TEXT("{white}GetActorRotation : {green}%s"), *GetActorRotation().ToString()));
+// 	return Infos;
+// }
+
 // Called when the game starts or when spawned
 void ABuildEntity::BeginPlay()
 {
 	Super::BeginPlay();
 	
+#if WITH_GAMEPLAY_DEBUGGER_MENU
+	// ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, OnDelegateCall)
+	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCall"))).
+	// 	BindUObject(
+	// 		this, &ABuildEntity::OnDelegateCall);
+	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCallFuncName"))).
+	// 	BindUFunction(
+	// 		this, "OnDelegateCallFuncName");
+#endif
 }
 
 // Called every frame

@@ -18,7 +18,14 @@ class BUILDSYSTEMRUNTIME_API UBuildRuntimeSubsystem : public ULuaWorldSubsystem
 	GENERATED_BODY()
 
 public:
+	static int32 Test;
+	UBuildRuntimeSubsystem();
+
 	void StartBuild();
+
+protected:
+	virtual void OnInitialize() override;
+	virtual void OnDeinitialize() override;
 	
 	GET_GAME_FEATURE_LUA_PATH(BuildSystem)
 };

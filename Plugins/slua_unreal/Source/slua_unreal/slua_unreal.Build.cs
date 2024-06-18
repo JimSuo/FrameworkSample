@@ -79,6 +79,7 @@ public class slua_unreal : ModuleRules
             new string[]
             {
                 "Core",
+                "FrameworkGameplayDebugger",
                 // ... add other public dependencies that you statically link with here ...
             }
             );
@@ -99,6 +100,7 @@ public class slua_unreal : ModuleRules
                 "UMG",
                 "InputCore",
                 "NetCore",
+                "FrameworkGameplayDebugger",
                 // ... add private dependencies that you statically link with here ...
             }
             );

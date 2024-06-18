@@ -6,7 +6,6 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "BuildSystemRuntime/Public/Subsystems/BuildRuntimeSubsystem.h"
-#include "Runtime/Engine/Classes/Engine/LocalPlayer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBuildRuntimeSubsystem() {}
 
@@ -78,7 +77,6 @@ template<> BUILDSYSTEMRUNTIME_API UClass* StaticClass<UBuildRuntimeSubsystem>()
 {
 	return UBuildRuntimeSubsystem::StaticClass();
 }
-UBuildRuntimeSubsystem::UBuildRuntimeSubsystem() {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UBuildRuntimeSubsystem);
 UBuildRuntimeSubsystem::~UBuildRuntimeSubsystem() {}
 // End Class UBuildRuntimeSubsystem
@@ -87,10 +85,10 @@ UBuildRuntimeSubsystem::~UBuildRuntimeSubsystem() {}
 struct Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildRuntimeSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBuildRuntimeSubsystem, UBuildRuntimeSubsystem::StaticClass, TEXT("UBuildRuntimeSubsystem"), &Z_Registration_Info_UClass_UBuildRuntimeSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuildRuntimeSubsystem), 4225889647U) },
+		{ Z_Construct_UClass_UBuildRuntimeSubsystem, UBuildRuntimeSubsystem::StaticClass, TEXT("UBuildRuntimeSubsystem"), &Z_Registration_Info_UClass_UBuildRuntimeSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBuildRuntimeSubsystem), 2413742108U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildRuntimeSubsystem_h_2833970003(TEXT("/Script/BuildSystemRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildRuntimeSubsystem_h_4293763858(TEXT("/Script/BuildSystemRuntime"),
 	Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildRuntimeSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_Subsystems_BuildRuntimeSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

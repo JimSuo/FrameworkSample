@@ -6,7 +6,13 @@
         "PCH": "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
         "Includes": [
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\buildsystemruntime\\definitions.buildsystemruntime.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\buildsystemruntimemodule.h"
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\buildsystemruntimemodule.h",
+            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\gameplaydebugger\\public\\gameplaydebugger.h",
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\source\\buildsystemruntime\\public\\gameplaydebuggercategory_buildsystem.h",
+            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\gameplaydebugger\\public\\gameplaydebuggercategory.h",
+            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\gameplaydebugger\\public\\gameplaydebuggertypes.h",
+            "f:\\ue5code\\trunk\\5.4.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaydebugger\\uht\\gameplaydebuggertypes.generated.h",
+            "f:\\ue5code\\trunk\\5.4.0\\engine\\source\\runtime\\gameplaydebugger\\public\\gameplaydebuggeraddonbase.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

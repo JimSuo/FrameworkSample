@@ -7,10 +7,20 @@ public class FrameworkSample : ModuleRules
 	public FrameworkSample(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "slua_unreal" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { "slua_unreal", "slua_profile", "ModelViewViewModel", "Slate", "SlateCore", "UMG", "GameplayTags", "GameFeatures"});
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core",
+			"CoreUObject",
+			"Engine",
+			"InputCore",
+			"slua_unreal",
+			"BuildSystemRuntime",
+			"GameplayDebugger",
+			"FrameworkGameplayDebugger"
+		});
+
+		PrivateDependencyModuleNames.AddRange(new string[] { "slua_unreal", "slua_profile", "ModelViewViewModel", "Slate", "SlateCore", "UMG", "GameplayTags", "GameFeatures", "EnhancedInput" });
 		
 		
 		// Uncomment if you are using Slate UI

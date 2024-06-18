@@ -5,8 +5,13 @@ void AFrameworkSampleGameMode::InitGame(const FString& MapName, const FString& O
 	Super::InitGame(MapName, Options, ErrorMessage);
 }
 
+void AFrameworkSampleGameMode::GameWelcomePlayer(UNetConnection* Connection, FString& RedirectURL)
+{
+	Super::GameWelcomePlayer(Connection, RedirectURL);
+}
+
 void AFrameworkSampleGameMode::PreLogin(const FString& Options, const FString& Address,
-	const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
+                                        const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
 {
 	Super::PreLogin(Options, Address, UniqueId, ErrorMessage);
 }
@@ -36,7 +41,7 @@ APawn* AFrameworkSampleGameMode::SpawnDefaultPawnAtTransform_Implementation(ACon
 	const FTransform& SpawnTransform)
  {
 	return Super::SpawnDefaultPawnAtTransform_Implementation(NewPlayer, SpawnTransform);
-}
+} 
 
 void AFrameworkSampleGameMode::BeginPlay()
 {

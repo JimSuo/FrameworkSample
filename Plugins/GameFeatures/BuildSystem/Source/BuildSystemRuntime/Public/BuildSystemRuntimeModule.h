@@ -8,6 +8,9 @@
 class FBuildSystemRuntimeModule : public IModuleInterface
 {
 public:
+#if WITH_GAMEPLAY_DEBUGGER
+	static const FName GameplayDebuggerName;
+#endif
 	//~IModuleInterface
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;

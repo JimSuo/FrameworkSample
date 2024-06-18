@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BuildSystemRuntime.cpp.obj": [
+			"BuildRuntimeComponent.gen.cpp.obj",
+			"BuildSystemRuntimeModule.cpp.obj",
+			"BuildActor.gen.cpp.obj",
+			"BuildSystemRuntime.init.gen.cpp.obj",
+			"TestStaticMeshComponent.gen.cpp.obj",
+			"BuildActor.cpp.obj",
+			"BuildRuntimeComponent.cpp.obj",
+			"TestStaticMeshComponent.cpp.obj"
+		]
+	}
+}

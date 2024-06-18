@@ -6,15 +6,25 @@
 #include "LuaActorComponent.h"
 #include "BuildRuntimeComponent.generated.h"
 
+class TestClass
+{
+public:
+	
+};
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class BUILDSYSTEMRUNTIME_API UBuildRuntimeComponent : public ULuaActorComponent
 {
 	GENERATED_BODY()
-
+	
 public:
 	// Sets default values for this component's properties
 	UBuildRuntimeComponent(const FObjectInitializer& ObjectInitializer);
+
+	/**
+	 * 测试共享指针用
+	 */
+	TSharedPtr<TestClass> TestClassObjectPtr = nullptr;
 
 protected:
 	// Called when the game starts

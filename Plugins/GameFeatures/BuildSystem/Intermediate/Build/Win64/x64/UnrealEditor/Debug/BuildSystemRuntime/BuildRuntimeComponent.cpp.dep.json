@@ -63,8 +63,7 @@
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\source\\slua_unreal\\public\\luacppbindingpost.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luaoverriderinterface.generated.h",
             "d:\\documents\\unrealprojects\\frameworksample\\plugins\\slua_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\slua_unreal\\uht\\luaactorcomponent.generated.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\buildruntimecomponent.generated.h",
-            "d:\\documents\\unrealprojects\\frameworksample\\source\\frameworksample\\macro\\gamefeaturehelpermacro.h"
+            "d:\\documents\\unrealprojects\\frameworksample\\plugins\\gamefeatures\\buildsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\buildsystemruntime\\uht\\buildruntimecomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

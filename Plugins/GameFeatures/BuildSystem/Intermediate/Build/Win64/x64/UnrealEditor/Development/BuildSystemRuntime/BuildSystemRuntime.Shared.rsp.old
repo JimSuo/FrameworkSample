@@ -294,6 +294,12 @@
 /I "D:\Documents\UnrealProjects\FrameworkSample\Intermediate\Build\Win64\UnrealEditor\Inc\FrameworkSample\UHT"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Source"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkSample\Public"
+/I "..\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayDebugger\UHT"
+/I "Runtime\GameplayDebugger\Public"
+/I "D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkGameplayDebugger\Public"
+/I "..\Plugins\Runtime\ModelViewViewModel\Intermediate\Build\Win64\UnrealEditor\Inc\ModelViewViewModel\UHT"
+/I "..\Plugins\Runtime\ModelViewViewModel\Source"
+/I "..\Plugins\Runtime\ModelViewViewModel\Source\ModelViewViewModel\Public"
 /external:W0
 /external:I "ThirdParty\LibTiff\Source\Win64"
 /external:I "ThirdParty\LibTiff\Source"

@@ -14,8 +14,14 @@ UCLASS()
 class BUILDSYSTEMRUNTIME_API UTestStaticMeshComponent : public ULuaStaticMeshComponent
 {
 	GENERATED_BODY()
-	
+
+public:
 	UTestStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
 
+	UFUNCTION(BlueprintNativeEvent)
+	void LuaCallTest();
+
+	void LuaCallCppFuncTest();
+	
 	GET_GAME_FEATURE_LUA_PATH(BuildSystem)
 };

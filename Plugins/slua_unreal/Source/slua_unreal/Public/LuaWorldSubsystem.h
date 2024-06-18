@@ -11,8 +11,8 @@ using namespace slua;
 /**
  * 
  */
-UCLASS()
-class SLUA_UNREAL_API ULuaWorldSubsystem : public ULocalPlayerSubsystem, public ILuaOverriderInterface
+UCLASS(Abstract)
+class SLUA_UNREAL_API ULuaWorldSubsystem : public UWorldSubsystem, public ILuaOverriderInterface
 {
 	GENERATED_BODY()
 
@@ -20,17 +20,18 @@ public:
 	ULuaWorldSubsystem();
 	FString GetLuaFilePath_Implementation() const override;
 
+	virtual bool ShouldCreateSubsystem(UObject* Outer) const override;
+	
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	virtual void Deinitialize() override;
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void OnInitialize();
-	UFUNCTION(BlueprintImplementableEvent)
-	void OnDeinitialize();
-	
+
 protected:
+	UFUNCTION(BlueprintCallable)
+	virtual void OnInitialize() { ; }
+	UFUNCTION(BlueprintCallable)
+	virtual void OnDeinitialize() { ; }
+	
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "slua")
 	FString LuaFilePath;
-
-	// REG_EXTENSION_METHOD(ULuaWorldSubsystem, "initialize", &ULuaWorldSubsystem::Initialize)
 };

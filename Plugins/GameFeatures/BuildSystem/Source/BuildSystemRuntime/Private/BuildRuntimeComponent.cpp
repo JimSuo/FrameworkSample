@@ -3,9 +3,6 @@
 
 #include "BuildRuntimeComponent.h"
 
-#include "FrameworkSample/Macro/GameFeatureHelperMacro.h"
-
-
 // Sets default values for this component's properties
 UBuildRuntimeComponent::UBuildRuntimeComponent(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -20,7 +17,6 @@ void UBuildRuntimeComponent::BeginPlay()
 {
 	Super::BeginPlay();
 }
-
 
 // Called every frame
 void UBuildRuntimeComponent::TickComponent(float DeltaTime, ELevelTick TickType,
