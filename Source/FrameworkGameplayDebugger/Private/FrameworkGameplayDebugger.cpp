@@ -28,4 +28,4 @@ void FFrameworkGameplayDebuggerModule::ShutdownModule()
     
 IMPLEMENT_MODULE(FFrameworkGameplayDebuggerModule, FrameworkGameplayDebugger)
 
-DEFINE_LOG_CATEGORY(FrameworkGameplayDebuggerCategra);
+DEFINE_LOG_CATEGORY(FrameworkGameplayDebugger);

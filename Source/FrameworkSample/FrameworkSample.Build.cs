@@ -16,7 +16,6 @@ public class FrameworkSample : ModuleRules
 			"InputCore",
 			"slua_unreal",
 			"BuildSystemRuntime",
-			"GameplayDebugger",
 			"FrameworkGameplayDebugger"
 		});
 

@@ -2,7 +2,7 @@
 
 #include "GameplayDebuggerCategory_Framework.h"
 #include "LuaState.h"
-#include "FrameworkGameplayDebugger/Macro/GameplayDebuggerHelperMacro.h"
+#include "FrameworkGameplayDebugger/Macro/HelperMacro.h"
 #include "Net/UnrealNetwork.h"
 using namespace slua;
 

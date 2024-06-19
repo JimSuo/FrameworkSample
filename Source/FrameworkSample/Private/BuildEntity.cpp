@@ -3,7 +3,7 @@
 
 #include "BuildEntity.h"
 
-#include "FrameworkGameplayDebugger/Macro/GameplayDebuggerHelperMacro.h"
+#include "FrameworkGameplayDebugger/Macro/HelperMacro.h"
 #include "FrameworkGameplayDebugger/Public/GameplayDebuggerCategory_Framework.h"
 
 
@@ -26,9 +26,9 @@ ABuildEntity::ABuildEntity()
 void ABuildEntity::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-	// ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, OnDelegateCall)
+	ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, TestDebugFunc)
 	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCall"))).
 	// 	BindUObject(
 	// 		this, &ABuildEntity::OnDelegateCall);
@@ -36,6 +36,22 @@ void ABuildEntity::BeginPlay()
 	// 	BindUFunction(
 	// 		this, "OnDelegateCallFuncName");
 #endif
+}
+
+void ABuildEntity::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	#if WITH_GAMEPLAY_DEBUGGER_MENU
+    	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, TestDebugFunc)
+    #endif
+}
+
+TArray<FString> ABuildEntity::TestDebugFunc()
+{
+	TArray<FString> Infos;
+	Infos.Add(FString::Printf(TEXT("{white}ActorLocation : {green}%s"), *GetActorLocation().ToString()));
+	Infos.Add(FString::Printf(TEXT("{white}GetActorRotation : {green}%s"), *GetActorRotation().ToString()));
+	return Infos;
 }
 
 // Called every frame

@@ -14,7 +14,7 @@
 #include "LuaUserWidget.h"
 
 #include "GameplayDebuggerCategory_Framework.h"
-#include "FrameworkGameplayDebugger/Macro/GameplayDebuggerHelperMacro.h"
+#include "FrameworkGameplayDebugger/Macro/HelperMacro.h"
 
 TArray<FString> ULuaUserWidget::K2_OnGameplayDebugger_Implementation()
 {

@@ -10,4 +10,4 @@ public:
     virtual void ShutdownModule() override;
 };
 
-DECLARE_LOG_CATEGORY_EXTERN(FrameworkGameplayDebuggerCategra, Log, All);
+DECLARE_LOG_CATEGORY_EXTERN(FrameworkGameplayDebugger, Log, All);

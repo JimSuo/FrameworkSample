@@ -19,9 +19,18 @@ public:
 	// 添加绑定
 	FRAMEWORKGAMEPLAYDEBUGGER_API static FOnCollectDatas& AddOnCollectData(const FString& Key)
 	{
-		FOnCollectDatas Delegate;
-		DebugKeyDelegateMap.Add(Key, Delegate);
-		UE_LOG(FrameworkGameplayDebuggerCategra, Log, TEXT("添加了绑定, Key : %s"), *Key);
+		if (DebugKeyDelegateMap.Contains(Key))
+		{
+			UE_LOG(FrameworkGameplayDebugger, Warning, TEXT("重复添加绑定, Key : %s 已经存在"), *Key);
+			// 取消绑定当前函数, 方便后续绑定
+			DebugKeyDelegateMap[Key].Unbind();
+		}
+		else
+		{
+			FOnCollectDatas Delegate;
+			DebugKeyDelegateMap.Add(Key, Delegate);
+			UE_LOG(FrameworkGameplayDebugger, Log, TEXT("添加了绑定, Key : %s"), *Key);	
+		}
 		return DebugKeyDelegateMap[Key];
 	}
 	// 移除绑定
@@ -29,12 +38,12 @@ public:
 	{
 		if (!DebugKeyDelegateMap.Contains(Key))
 		{
-			UE_LOG(FrameworkGameplayDebuggerCategra, Error, TEXT("找不到Key : %s"), *Key);
+			UE_LOG(FrameworkGameplayDebugger, Error, TEXT("找不到Key : %s"), *Key);
 			return false;
 		}
 		DebugKeyDelegateMap[Key].Unbind();
 		DebugKeyDelegateMap.Remove(Key);
-		UE_LOG(FrameworkGameplayDebuggerCategra, Log, TEXT("Key : %s 移除绑定成功"), *Key);
+		UE_LOG(FrameworkGameplayDebugger, Log, TEXT("Key : %s 移除绑定成功"), *Key);
 		return true;
 	}
 	

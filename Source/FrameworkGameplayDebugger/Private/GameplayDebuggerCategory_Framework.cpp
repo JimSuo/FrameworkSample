@@ -13,24 +13,36 @@ FGameplayDebuggerCategory_Framework::FGameplayDebuggerCategory_Framework()
 
 void FGameplayDebuggerCategory_Framework::CollectData(APlayerController* OwnerPC, AActor* DebugActor)
 {
+	// 判断DebugActor是否为空
 	if (DebugActor == nullptr)
 	{
 		return;
 	}
+	// Debug字符串
 	TArray<FString> DebugDataStrArr;
+	// 遍历委托获取DebugInfo数据列表
 	for (auto Pair : DebugKeyDelegateMap)
 	{
-		// 添加开始分隔
-		DebugDataStrArr.Add(FString::Printf(TEXT("{red}------------------------------")));
 		FString DebugStr;
 		auto Delegate = Pair.Value;
+		// 检查绑定
 		if (Delegate.IsBound())
 		{
-			DebugDataStrArr.Append(Delegate.Execute());
+			auto Infos = Delegate.Execute();
+			// 空值筛选
+			if (Infos.IsEmpty())
+			{
+				continue;
+			}
+			// 开始分隔字符串
+			DebugDataStrArr.Add(FString::Printf(TEXT("{red}------------------------------")));
+			// 组合信息
+			DebugDataStrArr.Append(Infos);
+			// 结束分隔字符串
+			DebugDataStrArr.Add(FString::Printf(TEXT("{red}------------------------------")));
 		}
-		// 添加结束分隔
-		DebugDataStrArr.Add(FString::Printf(TEXT("{red}------------------------------")));
 	}
+	// 设置Debug输出信息
 	DebugData.StrArr = DebugDataStrArr;
 }
 

@@ -3,7 +3,7 @@
 
 #include "DecorationComponent.h"
 
-#include "FrameworkGameplayDebugger/Macro/GameplayDebuggerHelperMacro.h"
+#include "FrameworkGameplayDebugger/Macro/HelperMacro.h"
 #include "FrameworkSample/Utils/TransformLibrary.h"
 #include "GameplayDebuggerCategory_Framework.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -93,7 +93,9 @@ void UDecorationComponent::BeginPlay()
 {
 	Super::BeginPlay();
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-	ADD_GAMEPLAY_DEBUG_INFO_BIND_LAMBDA(UDecorationComponent, TEXT("Lambda1"),{
+	ADD_GAMEPLAY_DEBUG_INFO_BIND_LAMBDA(UDecorationComponent, FName(TEXT("Lambda1")),
+	                                    [this]()-> TArray<FString>
+	                                    {
 	                                    TArray<FString> Logs;
 	                                    Logs.Add(GetHandleDecorationName());
 	                                    return Logs;
@@ -168,7 +170,7 @@ void UDecorationComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_LAMBDA(UDecorationComponent, TEXT("Lambda1"))
+	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_LAMBDA(UDecorationComponent, FName(TEXT("Lambda1")))
 #endif
 }
 

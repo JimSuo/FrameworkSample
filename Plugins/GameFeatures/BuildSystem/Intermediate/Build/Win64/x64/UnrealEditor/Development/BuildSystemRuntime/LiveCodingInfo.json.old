@@ -13,14 +13,14 @@
 			"TestStaticMeshComponent.gen.cpp.obj",
 			"BuildActor.cpp.obj",
 			"BuildRuntimeComponent.cpp.obj",
-			"GameplayDebuggerCategory_BuildSystem.cpp.obj",
 			"BuildRuntimeSubsystem.cpp.obj",
 			"BuildSerializationSubsystem.cpp.obj",
 			"TestStaticMeshComponent.cpp.obj",
 			"DecorationComponent.cpp.obj",
 			"BuildActor.gen.cpp.obj",
 			"BuildSystemRuntime.init.gen.cpp.obj",
-			"BuildSystemRuntimeModule.cpp.obj"
+			"BuildSystemRuntimeModule.cpp.obj",
+			"GameplayDebuggerCategory_BuildSystem.cpp.obj"
 		]
 	}
 }

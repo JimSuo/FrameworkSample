@@ -287,7 +287,6 @@
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\slua_unreal\External\lua"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\slua_unreal\Source"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\slua_unreal\Source\slua_unreal\Public"
-/I "D:\Documents\UnrealProjects\FrameworkSample\Intermediate\Build\Win64\UnrealEditor\Inc\FrameworkGameplayDebugger\UHT"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Source"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkGameplayDebugger\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayDebugger\UHT"
