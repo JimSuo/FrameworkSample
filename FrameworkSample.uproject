@@ -18,7 +18,7 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "FrameworkGameplayDebugger",
+			"Name": "FrameworkUMG",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
@@ -76,6 +76,14 @@
 		},
 		{
 			"Name": "TAPython",
+			"Enabled": true
+		},
+		{
+			"Name": "WebBrowserWidget",
+			"Enabled": true
+		},
+		{
+			"Name": "CommonUI",
 			"Enabled": true
 		}
 	],

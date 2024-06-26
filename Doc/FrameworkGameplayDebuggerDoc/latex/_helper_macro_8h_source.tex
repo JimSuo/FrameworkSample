@@ -1,0 +1,53 @@
+\doxysection{Helper\+Macro.\+h}
+\hypertarget{_helper_macro_8h_source}{}\label{_helper_macro_8h_source}\index{Macro/HelperMacro.h@{Macro/HelperMacro.h}}
+\mbox{\hyperlink{_helper_macro_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00003}00003\ \textcolor{comment}{//\ 添加绑定-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00010}\mbox{\hyperlink{_helper_macro_8h_aa645dfeff8df22afd73095fb51b2f27d}{00010}}\ \textcolor{preprocessor}{\#define\ ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT(className,\ funcName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00011}00011\ \textcolor{preprocessor}{\ \ \ \ if\ (!funcName().IsEmpty())\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00012}00012\ \textcolor{preprocessor}{\ \ \ \ \{\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00013}00013\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ TEXT(\#className),\ TEXT(\#funcName),\ GetUniqueID())).BindUObject(this,\ \&className::funcName);\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00014}00014\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00022}\mbox{\hyperlink{_helper_macro_8h_a858467940377bac68e59524ac8d2a6b8}{00022}}\ \textcolor{preprocessor}{\#define\ ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT(uObject,\ className,\ funcName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00023}00023\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ TEXT((\#className),\ TEXT(\#funcName),\ object-\/>GetUniqueID())).BindUObject(object,\ \&className::funcName);}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00032}\mbox{\hyperlink{_helper_macro_8h_af9218da4a4d8edfd1f401142a3f3dfc9}{00032}}\ \textcolor{preprocessor}{\#define\ ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA(className,\ lambdaTagName,\ lambdaContent)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00033}00033\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ TEXT(\#className),\ *lambdaTagName.ToString(),\ GetUniqueID())).BindLambda(lambdaContent);}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00041}\mbox{\hyperlink{_helper_macro_8h_afe210cd3cf11fe44ecfd4a2c22d5a197}{00041}}\ \textcolor{preprocessor}{\#define\ ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT(uObject,\ lambdaTagName,\ lambdaContent)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00042}00042\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ *uObject-\/>GetName(),\ *lambdaTagName.ToString(),\ uObject-\/>GetUniqueID())).BindLambda(lambdaContent);}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00048}\mbox{\hyperlink{_helper_macro_8h_abf8b56b675f26f25fcf790c7689ce6a8}{00048}}\ \textcolor{preprocessor}{\#define\ ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM(customTagName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00049}00049\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT("{}\%s.\%d"{}),\ *customTagName.ToString(),\ GetUniqueID()))}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00056}\mbox{\hyperlink{_helper_macro_8h_a81e7c07855c8dac24fe51d16a2232977}{00056}}\ \textcolor{preprocessor}{\#define\ ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT(uObject,\ customTagName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00057}00057\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT("{}\%s.\%d"{}),\ *customTagName.ToString(),\ uObject-\/>GetUniqueID()))}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00059}00059\ \textcolor{comment}{//\ 解除绑定-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00066}\mbox{\hyperlink{_helper_macro_8h_ae34a33d729f26e6e20eb350139d4ba37}{00066}}\ \textcolor{preprocessor}{\#define\ REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT(className,\ funcName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00067}00067\ \textcolor{preprocessor}{\ \ \ \ if\ (!funcName().IsEmpty())\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00068}00068\ \textcolor{preprocessor}{\ \ \ \ \{\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00069}00069\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ TEXT(\#className),\ TEXT(\#funcName),\ GetUniqueID()));\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00070}00070\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00078}\mbox{\hyperlink{_helper_macro_8h_a1eefd69feca183453d12a8e872e46ab5}{00078}}\ \textcolor{preprocessor}{\#define\ REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT(uObject,\ className,\ funcName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00079}00079\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ TEXT(\#className),\ TEXT(\#funcName),\ uObject-\/>GetUniqueID()));}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00086}\mbox{\hyperlink{_helper_macro_8h_a564e5daa0f83e0d6873c018b4ffd7d86}{00086}}\ \textcolor{preprocessor}{\#define\ REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA(className,\ lambdaTagName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00087}00087\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ TEXT(\#className),\ *lambdaTagName.ToString(),\ GetUniqueID()));}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00094}\mbox{\hyperlink{_helper_macro_8h_ac8de35669c2069668aa607060268e9a5}{00094}}\ \textcolor{preprocessor}{\#define\ REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT(uObject,\ lambdaTagName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00095}00095\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT("{}\%s.\%s.\%d"{}),\ *uObject-\/>GetName(),\ *lambdaTagName.ToString(),\ uObject-\/>GetUniqueID()));}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00102}\mbox{\hyperlink{_helper_macro_8h_a6c01bef64bedf80708db9f7e6a902842}{00102}}\ \textcolor{preprocessor}{\#define\ REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM(customTagName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00103}00103\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT("{}\%s.\%d"{}),\ *customTagName.ToString(),\ GetUniqueID()));}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00110}\mbox{\hyperlink{_helper_macro_8h_a3428487b5ebc6c0421c1a43f38da2d9d}{00110}}\ \textcolor{preprocessor}{\#define\ REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT(uObject,\ customTagName)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{_helper_macro_8h_source_l00111}00111\ \textcolor{preprocessor}{\ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT("{}\%s.\%d"{}),\ *customTagName.ToString(),\ uObject-\/>GetUniqueID()));}}
+
+\end{DoxyCode}

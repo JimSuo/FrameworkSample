@@ -292,6 +292,8 @@
 /I "D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkGameplayDebugger\Public"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayDebugger\UHT"
 /I "Runtime\GameplayDebugger\Public"
+/I "D:\Documents\UnrealProjects\FrameworkSample\Intermediate\Build\Win64\UnrealEditor\Inc\FrameworkUMG\UHT"
+/I "D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkUMG\Public"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\slua_unreal\Source\slua_profile\Public"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BuildSystemRuntime\UHT"
 /I "D:\Documents\UnrealProjects\FrameworkSample\Plugins\GameFeatures\BuildSystem\Source"

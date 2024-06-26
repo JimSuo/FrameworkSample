@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "BuildSystemRuntime/Private/DecorationComponent.h"
+#include "BuildSystemRuntime/Public/DecorationComponent.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeDecorationComponent() {}
 
@@ -18,41 +18,41 @@ ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 UPackage* Z_Construct_UPackage__Script_BuildSystemRuntime();
 // End Cross Module References
 
-// Begin Class UDecorationComponent Function ReleaseHandleDecoration
-struct Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration_Statics
+// Begin Class UDecorationComponent Function PutDecoration
+struct Z_Construct_UFunction_UDecorationComponent_PutDecoration_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Build" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xe9\x87\x8a\xe6\x94\xbe\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n" },
+		{ "Comment", "/**\n\x09 * @brief \xe6\x94\xbe\xe7\xbd\xae\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n\x09 */" },
 #endif
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe9\x87\x8a\xe6\x94\xbe\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
+		{ "ToolTip", "@brief \xe6\x94\xbe\xe7\xbd\xae\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
 #endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDecorationComponent, nullptr, "ReleaseHandleDecoration", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDecorationComponent_PutDecoration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDecorationComponent, nullptr, "PutDecoration", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDecorationComponent_PutDecoration_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDecorationComponent_PutDecoration_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UDecorationComponent_PutDecoration()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDecorationComponent_PutDecoration_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UDecorationComponent::execReleaseHandleDecoration)
+DEFINE_FUNCTION(UDecorationComponent::execPutDecoration)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->ReleaseHandleDecoration();
+	P_THIS->PutDecoration();
 	P_NATIVE_END;
 }
-// End Class UDecorationComponent Function ReleaseHandleDecoration
+// End Class UDecorationComponent Function PutDecoration
 
 // Begin Class UDecorationComponent Function RotateDecoration
 struct Z_Construct_UFunction_UDecorationComponent_RotateDecoration_Statics
@@ -61,11 +61,11 @@ struct Z_Construct_UFunction_UDecorationComponent_RotateDecoration_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Build" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xe6\x97\x8b\xe8\xbd\xac\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n" },
+		{ "Comment", "/**\n\x09 * @brief \xe6\x97\x8b\xe8\xbd\xac\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n\x09 */" },
 #endif
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe6\x97\x8b\xe8\xbd\xac\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
+		{ "ToolTip", "@brief \xe6\x97\x8b\xe8\xbd\xac\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -101,11 +101,11 @@ struct Z_Construct_UFunction_UDecorationComponent_SetHandleDecoration_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Build" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xe8\xae\xbe\xe7\xbd\xae\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n" },
+		{ "Comment", "/**\n\x09* @brief \xe8\xae\xbe\xe7\xbd\xae\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9 \n\x09*/" },
 #endif
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe8\xae\xbe\xe7\xbd\xae\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
+		{ "ToolTip", "@brief \xe8\xae\xbe\xe7\xbd\xae\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -144,7 +144,7 @@ void UDecorationComponent::StaticRegisterNativesUDecorationComponent()
 {
 	UClass* Class = UDecorationComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ReleaseHandleDecoration", &UDecorationComponent::execReleaseHandleDecoration },
+		{ "PutDecoration", &UDecorationComponent::execPutDecoration },
 		{ "RotateDecoration", &UDecorationComponent::execRotateDecoration },
 		{ "SetHandleDecoration", &UDecorationComponent::execSetHandleDecoration },
 	};
@@ -162,38 +162,45 @@ struct Z_Construct_UClass_UDecorationComponent_Statics
 		{ "BlueprintSpawnableComponent", "" },
 		{ "BlueprintType", "true" },
 		{ "ClassGroupNames", "Custom" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/**\n * \xe6\x91\x86\xe6\x94\xbe\xe8\xa3\x85\xe9\xa5\xb0\xe5\x8a\x9f\xe8\x83\xbd\xe7\xbb\x84\xe4\xbb\xb6\n */" },
+#endif
 		{ "IncludePath", "DecorationComponent.h" },
 		{ "IsBlueprintBase", "true" },
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe6\x91\x86\xe6\x94\xbe\xe8\xa3\x85\xe9\xa5\xb0\xe5\x8a\x9f\xe8\x83\xbd\xe7\xbb\x84\xe4\xbb\xb6" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TraceObjectTypes_MetaData[] = {
 		{ "Category", "Build" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xe6\xa3\x80\xe6\xb5\x8b\xe7\xb1\xbb\xe5\x9e\x8b\n" },
+		{ "Comment", "/**\n\x09 * @brief \xe6\xa3\x80\xe6\xb5\x8b\xe7\xb1\xbb\xe5\x9e\x8b\n\x09 */" },
 #endif
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe6\xa3\x80\xe6\xb5\x8b\xe7\xb1\xbb\xe5\x9e\x8b" },
+		{ "ToolTip", "@brief \xe6\xa3\x80\xe6\xb5\x8b\xe7\xb1\xbb\xe5\x9e\x8b" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckDistance_MetaData[] = {
 		{ "Category", "Build" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xe6\xa3\x80\xe6\xb5\x8b\xe8\xb7\x9d\xe7\xa6\xbb\n" },
+		{ "Comment", "/**\n\x09 * @brief \xe6\xa3\x80\xe6\xb5\x8b\xe8\xb7\x9d\xe7\xa6\xbb\n\x09 */" },
 #endif
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe6\xa3\x80\xe6\xb5\x8b\xe8\xb7\x9d\xe7\xa6\xbb" },
+		{ "ToolTip", "@brief \xe6\xa3\x80\xe6\xb5\x8b\xe8\xb7\x9d\xe7\xa6\xbb" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HandleDecoration_MetaData[] = {
 		{ "Category", "DecorationComponent" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xe6\x8c\x81\xe6\x9c\x89\xe7\x9a\x84\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n" },
+		{ "Comment", "/**\n\x09 * @brief \xe6\x8c\x81\xe6\x9c\x89\xe7\x9a\x84\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9\n\x09 */" },
 #endif
-		{ "ModuleRelativePath", "Private/DecorationComponent.h" },
+		{ "ModuleRelativePath", "Public/DecorationComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe6\x8c\x81\xe6\x9c\x89\xe7\x9a\x84\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
+		{ "ToolTip", "@brief \xe6\x8c\x81\xe6\x9c\x89\xe7\x9a\x84\xe8\xa3\x85\xe9\xa5\xb0\xe7\x89\xa9" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -204,9 +211,9 @@ struct Z_Construct_UClass_UDecorationComponent_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDecorationComponent_ReleaseHandleDecoration, "ReleaseHandleDecoration" }, // 2827829263
-		{ &Z_Construct_UFunction_UDecorationComponent_RotateDecoration, "RotateDecoration" }, // 1487701691
-		{ &Z_Construct_UFunction_UDecorationComponent_SetHandleDecoration, "SetHandleDecoration" }, // 1247436971
+		{ &Z_Construct_UFunction_UDecorationComponent_PutDecoration, "PutDecoration" }, // 3543254634
+		{ &Z_Construct_UFunction_UDecorationComponent_RotateDecoration, "RotateDecoration" }, // 3881527574
+		{ &Z_Construct_UFunction_UDecorationComponent_SetHandleDecoration, "SetHandleDecoration" }, // 2219709537
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -262,14 +269,14 @@ UDecorationComponent::~UDecorationComponent() {}
 // End Class UDecorationComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Private_DecorationComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_DecorationComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDecorationComponent, UDecorationComponent::StaticClass, TEXT("UDecorationComponent"), &Z_Registration_Info_UClass_UDecorationComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDecorationComponent), 1202026723U) },
+		{ Z_Construct_UClass_UDecorationComponent, UDecorationComponent::StaticClass, TEXT("UDecorationComponent"), &Z_Registration_Info_UClass_UDecorationComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDecorationComponent), 1247626794U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Private_DecorationComponent_h_2263300184(TEXT("/Script/BuildSystemRuntime"),
-	Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Private_DecorationComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Private_DecorationComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_DecorationComponent_h_4204224295(TEXT("/Script/BuildSystemRuntime"),
+	Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_DecorationComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_FrameworkSample_Plugins_GameFeatures_BuildSystem_Source_BuildSystemRuntime_Public_DecorationComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -8,13 +8,15 @@
 FRAMEWORKGAMEPLAYDEBUGGER_API DECLARE_DELEGATE_RetVal(TArray<FString>, FOnCollectDatas)
 
 /**
- * 框架GameplayDebug类型, 用于拓展Gameplay Debugger的类型支持在初始化时动态添加信息到GameplayDebugger中
+ * @brief 框架GameplayDebug类型, 用于拓展Gameplay Debugger的类型支持在初始化时动态添加信息到GameplayDebugger中
  */
 class FGameplayDebuggerCategory_Framework : public FGameplayDebuggerCategory
 {
 public:
-	// Debugger名称
+	
+	/// @brief Debugger名称
 	FRAMEWORKGAMEPLAYDEBUGGER_API static const FName GameplayDebuggerCategoryName;
+	/// @brief DebugInfo信息映射表
 	FRAMEWORKGAMEPLAYDEBUGGER_API static TMap<FString, FOnCollectDatas> DebugKeyDelegateMap;
 	// 添加绑定
 	FRAMEWORKGAMEPLAYDEBUGGER_API static FOnCollectDatas& AddOnCollectData(const FString& Key)

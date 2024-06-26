@@ -1,0 +1,73 @@
+[OPTIONS]
+Compiled file=D:\Documents\UnrealProjects\FrameworkSample\Source\FrameworkGameplayDebuggerDoc\Framework.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x804 Chinese (PRC)
+Title=Infinity Framework
+
+[WINDOWS]
+main="Infinity Framework","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+_framework_gameplay_debugger_8h.html
+_framework_gameplay_debugger_8h_source.html
+_framework_gameplay_debugger_library_8h.html
+_framework_gameplay_debugger_library_8h_source.html
+_gameplay_debugger_category___framework_8h.html
+_gameplay_debugger_category___framework_8h_source.html
+annotated.html
+class_f_framework_gameplay_debugger_module-members.html
+class_f_framework_gameplay_debugger_module.html
+class_u_framework_gameplay_debugger_library-members.html
+class_u_framework_gameplay_debugger_library.html
+classes.html
+dir_82b04302e54497f982e36b506bbc0a29.html
+dir_9ef552b39d0cc33b1dec67ea230cd3a8.html
+doxygen_crawl.html
+files.html
+functions.html
+functions_func.html
+graph_legend.html
+hierarchy.html
+index.html
+inherits.html
+bc_s.png
+bc_sd.png
+class_f_framework_gameplay_debugger_module__inherit__graph.pdf
+class_f_framework_gameplay_debugger_module__inherit__graph.png
+class_u_framework_gameplay_debugger_library__inherit__graph.pdf
+class_u_framework_gameplay_debugger_library__inherit__graph.png
+closed.png
+dir_9ef552b39d0cc33b1dec67ea230cd3a8_dep.pdf
+dir_9ef552b39d0cc33b1dec67ea230cd3a8_dep.png
+doxygen.svg
+framework-favicon-color.png
+graph_legend.png
+inherit_graph_0.png
+inherit_graph_1.png
+nav_f.png
+nav_fd.png
+nav_g.png
+nav_h.png
+nav_hd.png
+open.png
+splitbar.png
+splitbard.png
+sync_off.png
+sync_on.png
+tab_a.png
+tab_ad.png
+tab_b.png
+tab_bd.png
+tab_h.png
+tab_hd.png
+tab_s.png
+tab_sd.png
+doxygen.css
+dynsections.js
+jquery.js
+tabs.css

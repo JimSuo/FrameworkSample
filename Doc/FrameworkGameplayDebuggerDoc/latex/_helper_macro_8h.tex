@@ -1,0 +1,310 @@
+\doxysection{Macro/\+Helper\+Macro.h File Reference}
+\hypertarget{_helper_macro_8h}{}\label{_helper_macro_8h}\index{Macro/HelperMacro.h@{Macro/HelperMacro.h}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_aa645dfeff8df22afd73095fb51b2f27d}{ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT}}(class\+Name,  func\+Name)
+\begin{DoxyCompactList}\small\item\em 绑定以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_a858467940377bac68e59524ac8d2a6b8}{ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT\+\_\+\+WITH\+\_\+\+OBJECT}}(u\+Object,  class\+Name,  func\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT((\#class\+Name), TEXT(\#func\+Name), object-\/$>$Get\+Unique\+ID())).Bind\+UObject(object, \&class\+Name\+::func\+Name);
+\begin{DoxyCompactList}\small\item\em 绑定以传入对象并且以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_af9218da4a4d8edfd1f401142a3f3dfc9}{ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA}}(class\+Name,  lambda\+Tag\+Name,  lambda\+Content)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT(\#class\+Name), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), Get\+Unique\+ID())).Bind\+Lambda(lambda\+Content);
+\begin{DoxyCompactList}\small\item\em 绑定以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听~\newline
+example\+:~\newline
+ ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA(UTest\+Class, FName(TEXT("{}\+Test\+Func"{})), \mbox{[}=\mbox{]}()-\/\texorpdfstring{$>$}{>}TArray$<$\+FString$>$\{ TArray$<$\+FString$>$ Arr; return Arr;\}) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_afe210cd3cf11fe44ecfd4a2c22d5a197}{ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA\+\_\+\+WITH\+\_\+\+OBJECT}}(u\+Object,  lambda\+Tag\+Name,  lambda\+Content)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), \texorpdfstring{$\ast$}{*}u\+Object-\/$>$Get\+Name(), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID())).Bind\+Lambda(lambda\+Content);
+\begin{DoxyCompactList}\small\item\em 绑定以传入对象并且以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_abf8b56b675f26f25fcf790c7689ce6a8}{ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM}}(custom\+Tag\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), Get\+Unique\+ID()))
+\begin{DoxyCompactList}\small\item\em 自定义绑定委托对象添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_a81e7c07855c8dac24fe51d16a2232977}{ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM\+\_\+\+WITH\+\_\+\+OBJECT}}(u\+Object,  custom\+Tag\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID()))
+\begin{DoxyCompactList}\small\item\em 传入对象并自定义绑定委托对象添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_ae34a33d729f26e6e20eb350139d4ba37}{REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT}}(class\+Name,  func\+Name)
+\begin{DoxyCompactList}\small\item\em 解除以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_a1eefd69feca183453d12a8e872e46ab5}{REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT\+\_\+\+WITH\+\_\+\+OBJECT}}(u\+Object,  class\+Name,  func\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT(\#class\+Name), TEXT(\#func\+Name), u\+Object-\/$>$Get\+Unique\+ID()));
+\begin{DoxyCompactList}\small\item\em 解除以传入对象并且以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_a564e5daa0f83e0d6873c018b4ffd7d86}{REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA}}(class\+Name,  lambda\+Tag\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT(\#class\+Name), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), Get\+Unique\+ID()));
+\begin{DoxyCompactList}\small\item\em 解除以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_ac8de35669c2069668aa607060268e9a5}{REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA\+\_\+\+WITH\+\_\+\+OBJECT}}(u\+Object,  lambda\+Tag\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), \texorpdfstring{$\ast$}{*}u\+Object-\/$>$Get\+Name(), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID()));
+\begin{DoxyCompactList}\small\item\em 解除以传入对象并且以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_a6c01bef64bedf80708db9f7e6a902842}{REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM}}(custom\+Tag\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), Get\+Unique\+ID()));
+\begin{DoxyCompactList}\small\item\em 解除自定义的监听 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_helper_macro_8h_a3428487b5ebc6c0421c1a43f38da2d9d}{REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM\+\_\+\+WITH\+\_\+\+OBJECT}}(u\+Object,  custom\+Tag\+Name)~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID()));
+\begin{DoxyCompactList}\small\item\em 解除以传入\+UObject形式自定义绑定的监听 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_helper_macro_8h_abf8b56b675f26f25fcf790c7689ce6a8}\label{_helper_macro_8h_abf8b56b675f26f25fcf790c7689ce6a8} 
+\index{HelperMacro.h@{HelperMacro.h}!ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}}
+\index{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM(\begin{DoxyParamCaption}\item[{}]{custom\+Tag\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), Get\+Unique\+ID()))}
+
+
+
+自定义绑定委托对象添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em custom\+Tag\+Name} & 自定义的\+Tag(FName类型) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00048}{48}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_a81e7c07855c8dac24fe51d16a2232977}\label{_helper_macro_8h_a81e7c07855c8dac24fe51d16a2232977} 
+\index{HelperMacro.h@{HelperMacro.h}!ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}}
+\index{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM\+\_\+\+WITH\+\_\+\+OBJECT(\begin{DoxyParamCaption}\item[{}]{u\+Object,  }\item[{}]{custom\+Tag\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID()))}
+
+
+
+传入对象并自定义绑定委托对象添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em custom\+Tag\+Name} & 自定义的\+Tag(FName类型) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00056}{56}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_af9218da4a4d8edfd1f401142a3f3dfc9}\label{_helper_macro_8h_af9218da4a4d8edfd1f401142a3f3dfc9} 
+\index{HelperMacro.h@{HelperMacro.h}!ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}}
+\index{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA(\begin{DoxyParamCaption}\item[{}]{class\+Name,  }\item[{}]{lambda\+Tag\+Name,  }\item[{}]{lambda\+Content }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT(\#class\+Name), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), Get\+Unique\+ID())).Bind\+Lambda(lambda\+Content);}
+
+
+
+绑定以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听~\newline
+example\+:~\newline
+ ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA(UTest\+Class, FName(TEXT("{}\+Test\+Func"{})), \mbox{[}=\mbox{]}()-\/\texorpdfstring{$>$}{>}TArray$<$\+FString$>$\{ TArray$<$\+FString$>$ Arr; return Arr;\}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & 类名 \\
+\hline
+{\em lambda\+Tag\+Name} & Lambda表达式的\+Tag(FName类型) \\
+\hline
+{\em lambda\+Content} & Lambda表达式的内容 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00032}{32}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_afe210cd3cf11fe44ecfd4a2c22d5a197}\label{_helper_macro_8h_afe210cd3cf11fe44ecfd4a2c22d5a197} 
+\index{HelperMacro.h@{HelperMacro.h}!ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}}
+\index{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA\+\_\+\+WITH\+\_\+\+OBJECT(\begin{DoxyParamCaption}\item[{}]{u\+Object,  }\item[{}]{lambda\+Tag\+Name,  }\item[{}]{lambda\+Content }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), \texorpdfstring{$\ast$}{*}u\+Object-\/$>$Get\+Name(), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID())).Bind\+Lambda(lambda\+Content);}
+
+
+
+绑定以传入对象并且以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em lambda\+Tag\+Name} & Lambda表达式的\+Tag(FName类型) \\
+\hline
+{\em lambda\+Content} & Lambda表达式的内容 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00041}{41}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_aa645dfeff8df22afd73095fb51b2f27d}\label{_helper_macro_8h_aa645dfeff8df22afd73095fb51b2f27d} 
+\index{HelperMacro.h@{HelperMacro.h}!ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}}
+\index{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT(\begin{DoxyParamCaption}\item[{}]{class\+Name,  }\item[{}]{func\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!funcName().IsEmpty())\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ FGameplayDebuggerCategory\_Framework::AddOnCollectData(FString::Printf(TEXT(\textcolor{stringliteral}{"{}\%s.\%s.\%d"{}}),\ TEXT(\#className),\ TEXT(\#funcName),\ GetUniqueID())).BindUObject(\textcolor{keyword}{this},\ \&className::funcName);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+绑定以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & 类名 \\
+\hline
+{\em func\+Name} & 方法名 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00010}{10}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_a858467940377bac68e59524ac8d2a6b8}\label{_helper_macro_8h_a858467940377bac68e59524ac8d2a6b8} 
+\index{HelperMacro.h@{HelperMacro.h}!ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}}
+\index{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT@{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT\+\_\+\+WITH\+\_\+\+OBJECT(\begin{DoxyParamCaption}\item[{}]{u\+Object,  }\item[{}]{class\+Name,  }\item[{}]{func\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Add\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT((\#class\+Name), TEXT(\#func\+Name), object-\/$>$Get\+Unique\+ID())).Bind\+UObject(object, \&class\+Name\+::func\+Name);}
+
+
+
+绑定以传入对象并且以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em class\+Name} & 类名 \\
+\hline
+{\em func\+Name} & 方法名 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00022}{22}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_a6c01bef64bedf80708db9f7e6a902842}\label{_helper_macro_8h_a6c01bef64bedf80708db9f7e6a902842} 
+\index{HelperMacro.h@{HelperMacro.h}!REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}}
+\index{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM}}
+{\footnotesize\ttfamily \#define REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM(\begin{DoxyParamCaption}\item[{}]{custom\+Tag\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), Get\+Unique\+ID()));}
+
+
+
+解除自定义的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em custom\+Tag\+Name} & 自定义的\+Tag(FName类型) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00102}{102}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_a3428487b5ebc6c0421c1a43f38da2d9d}\label{_helper_macro_8h_a3428487b5ebc6c0421c1a43f38da2d9d} 
+\index{HelperMacro.h@{HelperMacro.h}!REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}}
+\index{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_CUSTOM\_WITH\_OBJECT}}
+{\footnotesize\ttfamily \#define REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+CUSTOM\+\_\+\+WITH\+\_\+\+OBJECT(\begin{DoxyParamCaption}\item[{}]{u\+Object,  }\item[{}]{custom\+Tag\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%d"{}), \texorpdfstring{$\ast$}{*}custom\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID()));}
+
+
+
+解除以传入\+UObject形式自定义绑定的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em custom\+Tag\+Name} & 自定义的\+Tag(FName类型) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00110}{110}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_a564e5daa0f83e0d6873c018b4ffd7d86}\label{_helper_macro_8h_a564e5daa0f83e0d6873c018b4ffd7d86} 
+\index{HelperMacro.h@{HelperMacro.h}!REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}}
+\index{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA}}
+{\footnotesize\ttfamily \#define REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA(\begin{DoxyParamCaption}\item[{}]{class\+Name,  }\item[{}]{lambda\+Tag\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT(\#class\+Name), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), Get\+Unique\+ID()));}
+
+
+
+解除以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & 类名 \\
+\hline
+{\em lambda\+Tag\+Name} & Lambda表达式的\+Tag(FName类型) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00086}{86}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_ac8de35669c2069668aa607060268e9a5}\label{_helper_macro_8h_ac8de35669c2069668aa607060268e9a5} 
+\index{HelperMacro.h@{HelperMacro.h}!REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}}
+\index{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}}
+{\footnotesize\ttfamily \#define REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+LAMBDA\+\_\+\+WITH\+\_\+\+OBJECT(\begin{DoxyParamCaption}\item[{}]{u\+Object,  }\item[{}]{lambda\+Tag\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), \texorpdfstring{$\ast$}{*}u\+Object-\/$>$Get\+Name(), \texorpdfstring{$\ast$}{*}lambda\+Tag\+Name.\+To\+String(), u\+Object-\/$>$Get\+Unique\+ID()));}
+
+
+
+解除以传入对象并且以\+Bind\+Lambda的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em lambda\+Tag\+Name} & Lambda表达式的\+Tag(FName类型) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00094}{94}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_ae34a33d729f26e6e20eb350139d4ba37}\label{_helper_macro_8h_ae34a33d729f26e6e20eb350139d4ba37} 
+\index{HelperMacro.h@{HelperMacro.h}!REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}}
+\index{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT}}
+{\footnotesize\ttfamily \#define REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT(\begin{DoxyParamCaption}\item[{}]{class\+Name,  }\item[{}]{func\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!funcName().IsEmpty())\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ FGameplayDebuggerCategory\_Framework::RemoveOnCollectData(FString::Printf(TEXT(\textcolor{stringliteral}{"{}\%s.\%s.\%d"{}}),\ TEXT(\#className),\ TEXT(\#funcName),\ GetUniqueID()));\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+解除以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & 类名 \\
+\hline
+{\em func\+Name} & 方法名 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00066}{66}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+
+\Hypertarget{_helper_macro_8h_a1eefd69feca183453d12a8e872e46ab5}\label{_helper_macro_8h_a1eefd69feca183453d12a8e872e46ab5} 
+\index{HelperMacro.h@{HelperMacro.h}!REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}}
+\index{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT@{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}!HelperMacro.h@{HelperMacro.h}}
+\doxysubsubsection{\texorpdfstring{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_UOBJECT\_WITH\_OBJECT}}
+{\footnotesize\ttfamily \#define REMOVE\+\_\+\+GAMEPLAY\+\_\+\+DEBUG\+\_\+\+INFO\+\_\+\+BIND\+\_\+\+UOBJECT\+\_\+\+WITH\+\_\+\+OBJECT(\begin{DoxyParamCaption}\item[{}]{u\+Object,  }\item[{}]{class\+Name,  }\item[{}]{func\+Name }\end{DoxyParamCaption})~ FGameplay\+Debugger\+Category\+\_\+\+Framework\+::\+Remove\+On\+Collect\+Data(FString\+::\+Printf(TEXT("{}\%s.\%s.\%d"{}), TEXT(\#class\+Name), TEXT(\#func\+Name), u\+Object-\/$>$Get\+Unique\+ID()));}
+
+
+
+解除以传入对象并且以\+Bind\+UObject的形式添加\+Debug信息到\+FDC中的监听 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u\+Object} & 传入的\+UObject对象 \\
+\hline
+{\em class\+Name} & 类名 \\
+\hline
+{\em func\+Name} & 方法名 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_helper_macro_8h_source_l00078}{78}} of file \mbox{\hyperlink{_helper_macro_8h_source}{Helper\+Macro.\+h}}.
+

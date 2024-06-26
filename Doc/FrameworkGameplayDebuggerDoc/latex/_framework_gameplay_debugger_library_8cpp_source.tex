@@ -1,0 +1,55 @@
+\doxysection{Framework\+Gameplay\+Debugger\+Library.\+cpp}
+\hypertarget{_framework_gameplay_debugger_library_8cpp_source}{}\label{_framework_gameplay_debugger_library_8cpp_source}\index{Private/FrameworkGameplayDebuggerLibrary.cpp@{Private/FrameworkGameplayDebuggerLibrary.cpp}}
+\mbox{\hyperlink{_framework_gameplay_debugger_library_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00001}00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_framework_gameplay_debugger_library_8h}{FrameworkGameplayDebuggerLibrary.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gameplay_debugger_category___framework_8h}{GameplayDebuggerCategory\_Framework.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_helper_macro_8h}{FrameworkGameplayDebugger/Macro/HelperMacro.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00009}00009\ \textcolor{keyword}{const}\ FName\ UFrameworkGameplayDebuggerLibrary::FrameworkGameplayDebuggerLibraryLambdaTag\ =\ FName(TEXT(\textcolor{stringliteral}{"{}BindFromBlueprintFunctionLibrary"{}}));}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00011}\mbox{\hyperlink{class_u_framework_gameplay_debugger_library_a38e94cf79c24fbbd0043d44eb8784196}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_framework_gameplay_debugger_library_a38e94cf79c24fbbd0043d44eb8784196}{UFrameworkGameplayDebuggerLibrary::AddCustomGameplayDebugger}}(UObject*\ InObject,}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FOnGameplayDebug\ OnGameplayDebugDo,}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ OutResult)}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#if\ WITH\_GAMEPLAY\_DEBUGGER\_MENU}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsValid(InObject))}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ UE\_LOG(\mbox{\hyperlink{class_framework_gameplay_debugger}{FrameworkGameplayDebugger}},\ Error,\ TEXT(\textcolor{stringliteral}{"{}Object为空!!!"{}}))}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ OutResult\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{_helper_macro_8h_afe210cd3cf11fe44ecfd4a2c22d5a197}{ADD\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}}(InObject,\ UFrameworkGameplayDebuggerLibrary::FrameworkGameplayDebuggerLibraryLambdaTag,}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [=]()-\/>\ TArray<FString>}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TArray<FString>\ Infos;}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (OnGameplayDebugDo.IsBound())}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Infos\ =\ OnGameplayDebugDo.Execute();}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Infos;}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00032}00032\ \ \ \ \ OutResult\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00033}00033\ \textcolor{preprocessor}{\#endif\ \ }}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00036}\mbox{\hyperlink{class_u_framework_gameplay_debugger_library_ac0cf7d89f3a95f5efe1bc8d6c0439bca}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_framework_gameplay_debugger_library_ac0cf7d89f3a95f5efe1bc8d6c0439bca}{UFrameworkGameplayDebuggerLibrary::RemoveCustomGameplayDebugger}}(UObject*\ InObject,\ \textcolor{keywordtype}{bool}\&\ OutResult)}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00038}00038\ \textcolor{preprocessor}{\#if\ WITH\_GAMEPLAY\_DEBUGGER\_MENU}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsValid(InObject))}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ UE\_LOG(\mbox{\hyperlink{class_framework_gameplay_debugger}{FrameworkGameplayDebugger}},\ Error,\ TEXT(\textcolor{stringliteral}{"{}Object为空!!!"{}}))}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ OutResult\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{_helper_macro_8h_ac8de35669c2069668aa607060268e9a5}{REMOVE\_GAMEPLAY\_DEBUG\_INFO\_BIND\_LAMBDA\_WITH\_OBJECT}}(InObject,}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UFrameworkGameplayDebuggerLibrary::FrameworkGameplayDebuggerLibraryLambdaTag);}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00047}00047\ \ \ \ \ OutResult\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00048}00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_framework_gameplay_debugger_library_8cpp_source_l00049}00049\ \}}
+
+\end{DoxyCode}

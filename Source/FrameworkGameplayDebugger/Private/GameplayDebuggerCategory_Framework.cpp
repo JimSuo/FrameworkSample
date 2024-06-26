@@ -2,6 +2,8 @@
 
 #include "GameplayDebugger.h"
 
+#if WITH_GAMEPLAY_DEBUGGER_MENU
+
 const FName FGameplayDebuggerCategory_Framework::GameplayDebuggerCategoryName = FName(TEXT("Framework"));
 TMap<FString, FOnCollectDatas> FGameplayDebuggerCategory_Framework::DebugKeyDelegateMap;
 FGameplayDebuggerCategory_Framework* FGameplayDebuggerCategory_Framework::Instance = nullptr;
@@ -76,3 +78,5 @@ void FGameplayDebuggerCategory_Framework::FDebugData::Serialize(FArchive& archiv
 {
 	archive << StrArr;
 }
+
+#endif

@@ -1,3 +1,16 @@
 {
-    "shortcuts": []
+    "shortcuts": [
+        {
+            "actors": [],
+            "assets": [
+                "/Game/CustomBuildingSystem/Blueprint/Widget/WebTest"
+            ],
+            "chameleon_json": "",
+            "drop_type": 4,
+            "folders": [],
+            "icon": "",
+            "py_cmd": "",
+            "text": "Web"
+        }
+    ]
 }

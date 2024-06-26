@@ -10,12 +10,9 @@ public class FrameworkSampleTarget : TargetRules
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 
-		ExtraModuleNames.AddRange( new string[] { "FrameworkSample" } );
-		RegisterModulesCreatedByRider();
-	}
-
-	private void RegisterModulesCreatedByRider()
-	{
-		ExtraModuleNames.AddRange(new string[] { "FrameworkGameplayDebugger" });
+		ExtraModuleNames.AddRange(new string[]
+		{
+			"FrameworkSample",
+		});
 	}
 }

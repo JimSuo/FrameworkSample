@@ -1,0 +1,73 @@
+\doxysection{Gameplay\+Debugger\+Category\+\_\+\+Framework.\+h}
+\hypertarget{_gameplay_debugger_category___framework_8h_source}{}\label{_gameplay_debugger_category___framework_8h_source}\index{D:/Documents/UnrealProjects/FrameworkSample/Source/FrameworkGameplayDebugger/Public/GameplayDebuggerCategory\_Framework.h@{D:/Documents/UnrealProjects/FrameworkSample/Source/FrameworkGameplayDebugger/Public/GameplayDebuggerCategory\_Framework.h}}
+\mbox{\hyperlink{_gameplay_debugger_category___framework_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include"{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_framework_gameplay_debugger_8h}{FrameworkGameplayDebugger.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#if\ WITH\_GAMEPLAY\_DEBUGGER\_MENU}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayDebuggerCategory.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ FRAMEWORKGAMEPLAYDEBUGGER\_API\ DECLARE\_DELEGATE\_RetVal(TArray<FString>,\ FOnCollectDatas)}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }FGameplayDebuggerCategory\_Framework\ :\ \textcolor{keyword}{public}\ FGameplayDebuggerCategory}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ FRAMEWORKGAMEPLAYDEBUGGER\_API\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ GameplayDebuggerCategoryName;}
+\DoxyCodeLine{00020\ \ \ \ \ FRAMEWORKGAMEPLAYDEBUGGER\_API\ \textcolor{keyword}{static}\ TMap<FString,\ FOnCollectDatas>\ DebugKeyDelegateMap;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ 添加绑定}}
+\DoxyCodeLine{00022\ \ \ \ \ FRAMEWORKGAMEPLAYDEBUGGER\_API\ \textcolor{keyword}{static}\ FOnCollectDatas\&\ AddOnCollectData(\textcolor{keyword}{const}\ FString\&\ Key)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DebugKeyDelegateMap.Contains(Key))}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ UE\_LOG(FrameworkGameplayDebugger,\ Warning,\ TEXT(\textcolor{stringliteral}{"{}重复添加绑定,\ Key\ :\ \%s\ 已经存在"{}}),\ *Key);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 取消绑定当前函数,\ 方便后续绑定}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ DebugKeyDelegateMap[Key].Unbind();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ FOnCollectDatas\ Delegate;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ DebugKeyDelegateMap.Add(Key,\ Delegate);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ UE\_LOG(FrameworkGameplayDebugger,\ Log,\ TEXT(\textcolor{stringliteral}{"{}添加了绑定,\ Key\ :\ \%s"{}}),\ *Key);\ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DebugKeyDelegateMap[Key];}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ 移除绑定}}
+\DoxyCodeLine{00039\ \ \ \ \ FRAMEWORKGAMEPLAYDEBUGGER\_API\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ RemoveOnCollectData(\textcolor{keyword}{const}\ FString\&\ Key)}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!DebugKeyDelegateMap.Contains(Key))}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ UE\_LOG(FrameworkGameplayDebugger,\ Error,\ TEXT(\textcolor{stringliteral}{"{}找不到Key\ :\ \%s"{}}),\ *Key);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ DebugKeyDelegateMap[Key].Unbind();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ DebugKeyDelegateMap.Remove(Key);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ UE\_LOG(FrameworkGameplayDebugger,\ Log,\ TEXT(\textcolor{stringliteral}{"{}Key\ :\ \%s\ 移除绑定成功"{}}),\ *Key);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Debugger单例}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ FGameplayDebuggerCategory\_Framework*\ Instance;}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ FGameplayDebuggerCategory\_Framework();}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ CollectData(APlayerController*\ OwnerPC,\ AActor*\ DebugActor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnDataPackReplicated(int32\ DataPackId)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ DrawData(APlayerController*\ OwnerPC,\ FGameplayDebuggerCanvasContext\&\ CanvasContext)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ FDebugRenderSceneProxy*\ CreateDebugSceneProxy(\textcolor{keyword}{const}\ UPrimitiveComponent*\ InComponent,\ FDebugDrawDelegateHelper*\&\ OutDelegateHelper)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ FRAMEWORKGAMEPLAYDEBUGGER\_API\ \textcolor{keyword}{static}\ TSharedRef<FGameplayDebuggerCategory>\ MakeInstance();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Debug信息}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{struct\ }FDebugData}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ TArray<FString>\ StrArr;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Serialize(FArchive\&\ archive);}
+\DoxyCodeLine{00069\ \ \ \ \ \}\ DebugData;}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

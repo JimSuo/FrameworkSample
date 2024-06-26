@@ -10,12 +10,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
 
-
-// Sets default values for this component's properties
-UDecorationComponent::UDecorationComponent()
+UDecorationComponent::UDecorationComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
@@ -30,36 +26,15 @@ FString UDecorationComponent::GetHandleDecorationName() const
 
 void UDecorationComponent::SetHandleDecoration(AActor* InDecoration)
 {
-	auto World = GetWorld();
-	auto Camera = UGameplayStatics::GetPlayerCameraManager(World, 0);
-	auto Start = Camera->GetCameraLocation();
-	auto End = FTransformLibrary::CalcForwardLocation(
-		Start, UKismetMathLibrary::GetForwardVector(Camera->GetCameraRotation()), CheckDistance);
-	TArray<AActor*> ActorsToIgnore{HandleDecoration.Get()};
-	FHitResult HitResult;
-	// 开始射线检测
-	auto HasTraced = UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(),
-																	 Start, End,
-																	 TraceObjectTypes,
-																	 false,
-																	 ActorsToIgnore,
-																	 EDrawDebugTrace::ForDuration,
-																	 HitResult,
-																	 true,
-																	 FLinearColor::Red,
-																	 FLinearColor::Green,
-																	 50.0f);
-	if (HasTraced == false)
+	// // 测试用, 需要手动触发测试时可打开
+	HandleDecoration = TestSetHandleDecoration();
+
+	// 如果当前检测的对象为空或当前持有对象, 不做设置与操作
+	if (InDecoration == nullptr || HandleDecoration.IsValid() == true)
 	{
 		return;
 	}
-	
-	// 如果当前持有对象, 不做设置与操作
-	if (HandleDecoration.IsValid() == true)
-	{
-		return;
-	}
-	HandleDecoration = HitResult.GetActor();
+	HandleDecoration = InDecoration;
 	HandleDecoration->SetActorRotation(FRotator::ZeroRotator);
 }
 
@@ -93,21 +68,13 @@ void UDecorationComponent::BeginPlay()
 {
 	Super::BeginPlay();
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-	ADD_GAMEPLAY_DEBUG_INFO_BIND_LAMBDA(UDecorationComponent, FName(TEXT("Lambda1")),
-	                                    [this]()-> TArray<FString>
-	                                    {
-	                                    TArray<FString> Logs;
-	                                    Logs.Add(GetHandleDecorationName());
-	                                    return Logs;
-	                                    })
+	ADD_GAMEPLAY_DEBUG_INFO_BIND_CUSTOM(FName("DecorationComponentInfoLambda")).BindLambda([this]()-> TArray<FString>
+										{
+										TArray<FString> Logs;
+										Logs.Add(GetHandleDecorationName());
+										return Logs;
+										});
 #endif
-	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("111"))).BindLambda(
-	// 	[this]()-> TArray<FString>
-	// 	{
-	// 		TArray<FString> Logs;
-	// 		Logs.Add(GetHandleDecorationName());
-	// 		return Logs;
-	// 	});
 }
 
 // Called every frame
@@ -153,15 +120,17 @@ void UDecorationComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 		                                                                      FVector::One()));
 		// 设置是否可以放置
 		auto Deg = UKismetMathLibrary::DegAcos(FVector::UpVector.Dot(NormalVector));
-		// 根据道具的角度判断属性判断是否可放置
+		// TODO::需要角度判断字段属性, 根据道具的角度判断属性判断是否可放置
 		// bCanPut = UKismetMathLibrary::InRange_FloatFloat(Deg, MinCheckAngle, MaxCheckAngle);
+		// TODO::仅作测试用, 允许道具放在任何地方
+		bCanPut = true;
 	}
 	else
-	{ 
+	{
+		// 未检测到放置平面时处理的逻辑
 		auto NewYaw = UKismetMathLibrary::FindLookAtRotation(Start, HandleDecoration->GetActorLocation()).Yaw;
 		FRotator newRotator(0.0f, NewYaw, 0.0f);
 		HandleDecoration->SetActorTransform(UKismetMathLibrary::MakeTransform(End, newRotator, FVector::One()));
-		
 		bCanPut = false;
 	}
 }
@@ -170,7 +139,41 @@ void UDecorationComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 #if WITH_GAMEPLAY_DEBUGGER_MENU
-	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_LAMBDA(UDecorationComponent, FName(TEXT("Lambda1")))
+	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_CUSTOM(FName("DecorationComponentInfoLambda"))
 #endif
+}
+
+AActor* UDecorationComponent::TestSetHandleDecoration()
+{
+	auto World = GetWorld();
+	auto Camera = UGameplayStatics::GetPlayerCameraManager(World, 0);
+	auto Start = Camera->GetCameraLocation();
+	auto End = FTransformLibrary::CalcForwardLocation(
+		Start, UKismetMathLibrary::GetForwardVector(Camera->GetCameraRotation()), CheckDistance);
+	TArray<AActor*> ActorsToIgnore{HandleDecoration.Get()};
+	FHitResult HitResult;
+	// 开始射线检测
+	auto HasTraced = UKismetSystemLibrary::LineTraceSingleForObjects(GetWorld(),
+																	 Start, End,
+																	 TraceObjectTypes,
+																	 false,
+																	 ActorsToIgnore,
+																	 EDrawDebugTrace::ForDuration,
+																	 HitResult,
+																	 true,
+																	 FLinearColor::Red,
+																	 FLinearColor::Green,
+																	 50.0f);
+	if (HasTraced == false)
+	{
+		return nullptr;
+	}
+	if (HandleDecoration.IsValid() == true)
+	{
+		return HandleDecoration.Get();
+	}
+	auto TracedActor = HitResult.GetActor();
+	TracedActor->SetActorRotation(FRotator::ZeroRotator);
+	return TracedActor;
 }
 

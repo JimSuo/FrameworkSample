@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Infinity Framework: D:/Documents/UnrealProjects/FrameworkSample/Source/FrameworkGameplayDebugger/Public/FrameworkGameplayDebuggerLibrary.h 源文件</title>
+<link rel="icon" href="framework-favicon-color.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="framework-favicon-color.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Infinity Framework<span id="projectnumber">&#160;Beta 1.0.0</span>
+   </div>
+   <div id="projectbrief">基于UnrealEngine基础模块拓展与封装的广泛适用于游戏项目的框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_82b04302e54497f982e36b506bbc0a29.html">FrameworkGameplayDebugger</a></li><li class="navelem"><a class="el" href="dir_9ef552b39d0cc33b1dec67ea230cd3a8.html">Public</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FrameworkGameplayDebuggerLibrary.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_framework_gameplay_debugger_library_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Kismet/BlueprintFunctionLibrary.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;FrameworkGameplayDebuggerLibrary.generated.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>DECLARE_DYNAMIC_DELEGATE_RetVal(TArray&lt;FString&gt;, FOnGameplayDebug);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>UCLASS()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_u_framework_gameplay_debugger_library.html">   18</a></span>class FRAMEWORKGAMEPLAYDEBUGGER_API <a class="code hl_class" href="class_u_framework_gameplay_debugger_library.html">UFrameworkGameplayDebuggerLibrary</a> : public UBlueprintFunctionLibrary</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static</span> <span class="keyword">const</span> FName FrameworkGameplayDebuggerLibraryLambdaTag;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    UFUNCTION(BlueprintCallable, Category=<span class="stringliteral">&quot;Framework | GameplayDebugger&quot;</span>, meta=(DisplayName = <span class="stringliteral">&quot;Add Custom Gameplay Debugger&quot;</span>))</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_u_framework_gameplay_debugger_library.html#a4b37f7606f81c7531389e26635b5d2e2">   35</a></span>    static <span class="keywordtype">void</span> AddCustomGameplayDebugger(UObject* InObject, FOnGameplayDebug OnGameplayDebugDo, <span class="keywordtype">bool</span>&amp; OutResult);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    UFUNCTION(BlueprintCallable, Category=&quot;Framework | GameplayDebugger&quot;, meta=(DisplayName = &quot;Remove Custom Gameplay Debugger&quot;))</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_u_framework_gameplay_debugger_library.html#a5d184e841c392a0f2ed72ce01505c4d3">   41</a></span>    static <span class="keywordtype">void</span> RemoveCustomGameplayDebugger(UObject* InObject, <span class="keywordtype">bool</span>&amp; OutResult);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="ttc" id="aclass_u_framework_gameplay_debugger_library_html"><div class="ttname"><a href="class_u_framework_gameplay_debugger_library.html">UFrameworkGameplayDebuggerLibrary</a></div><div class="ttdoc">FrameworkGameplayDebugger(FGD)蓝图函数库</div><div class="ttdef"><b>Definition</b> FrameworkGameplayDebuggerLibrary.h:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

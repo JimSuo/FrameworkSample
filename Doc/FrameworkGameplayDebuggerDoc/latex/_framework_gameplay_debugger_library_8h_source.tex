@@ -1,0 +1,31 @@
+\doxysection{Framework\+Gameplay\+Debugger\+Library.\+h}
+\hypertarget{_framework_gameplay_debugger_library_8h_source}{}\label{_framework_gameplay_debugger_library_8h_source}\index{D:/Documents/UnrealProjects/FrameworkSample/Source/FrameworkGameplayDebugger/Public/FrameworkGameplayDebuggerLibrary.h@{D:/Documents/UnrealProjects/FrameworkSample/Source/FrameworkGameplayDebugger/Public/FrameworkGameplayDebuggerLibrary.h}}
+\mbox{\hyperlink{_framework_gameplay_debugger_library_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Kismet/BlueprintFunctionLibrary.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}FrameworkGameplayDebuggerLibrary.generated.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ DECLARE\_DYNAMIC\_DELEGATE\_RetVal(TArray<FString>,\ FOnGameplayDebug);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ FRAMEWORKGAMEPLAYDEBUGGER\_API\ \mbox{\hyperlink{class_u_framework_gameplay_debugger_library}{UFrameworkGameplayDebuggerLibrary}}\ :\ public\ UBlueprintFunctionLibrary}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ FName\ FrameworkGameplayDebuggerLibraryLambdaTag;}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category=\textcolor{stringliteral}{"{}Framework\ |\ GameplayDebugger"{}},\ meta=(DisplayName\ =\ \textcolor{stringliteral}{"{}Add\ Custom\ Gameplay\ Debugger"{}}))}
+\DoxyCodeLine{00035\ \ \ \ \ static\ \textcolor{keywordtype}{void}\ AddCustomGameplayDebugger(UObject*\ InObject,\ FOnGameplayDebug\ OnGameplayDebugDo,\ \textcolor{keywordtype}{bool}\&\ OutResult);}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category="{}Framework\ |\ GameplayDebugger"{},\ meta=(DisplayName\ =\ "{}Remove\ Custom\ Gameplay\ Debugger"{}))}
+\DoxyCodeLine{00041\ \ \ \ \ static\ \textcolor{keywordtype}{void}\ RemoveCustomGameplayDebugger(UObject*\ InObject,\ \textcolor{keywordtype}{bool}\&\ OutResult);}
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

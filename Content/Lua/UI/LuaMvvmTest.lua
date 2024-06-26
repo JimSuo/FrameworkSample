@@ -1,15 +1,20 @@
 local LuaMvvmTest = {}
-local SubsystemBlueprintLibrary = import("SubsystemBlueprintLibrary")
-local BuildRuntimeSubsystem = import("BuildRuntimeSubsystem")
 
 function LuaMvvmTest:Initialize()
     print("LuaSubWidgetFirst:Initialize")
 end
 
+function LuaMvvmTest:K2_OnGameplayDebugger()
+    local infos = {
+        "MVVMAdd1",
+        "MVVMAdd2"
+    }
+    return infos
+end
+
 function LuaMvvmTest:Construct()
+    self.Super:Construct()
     print("LuaSubWidgetFirst:Construct")
-    local subsystem = SubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, BuildRuntimeSubsystem)
-    subsystem.StartBuild()
 end
 
 function LuaMvvmTest:Destruct()
