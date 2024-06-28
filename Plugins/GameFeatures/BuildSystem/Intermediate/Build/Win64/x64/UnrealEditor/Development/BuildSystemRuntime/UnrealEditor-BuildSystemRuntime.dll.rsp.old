@@ -51,7 +51,7 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayTags\UnrealEditor-GameplayTags.lib"
 "..\Plugins\Runtime\ModelViewViewModel\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModelViewViewModel\UnrealEditor-ModelViewViewModel.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayDebugger\UnrealEditor-GameplayDebugger.lib"
-"D:\Documents\UnrealProjects\FrameworkSample\Intermediate\Build\Win64\x64\UnrealEditor\Development\FrameworkGameplayDebugger\UnrealEditor-FrameworkGameplayDebugger.lib"
+"D:\Documents\UnrealProjects\FrameworkSample\Plugins\InfinityFramework\Intermediate\Build\Win64\x64\UnrealEditor\Development\FrameworkGameplayDebugger\UnrealEditor-FrameworkGameplayDebugger.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

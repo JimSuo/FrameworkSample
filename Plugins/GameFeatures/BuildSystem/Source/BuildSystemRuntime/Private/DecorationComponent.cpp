@@ -3,7 +3,7 @@
 
 #include "DecorationComponent.h"
 
-#include "FrameworkGameplayDebugger/Macro/HelperMacro.h"
+#include "GameplayDebugger/Macro/HelperMacro.h"
 #include "FrameworkSample/Utils/TransformLibrary.h"
 #include "GameplayDebuggerCategory_Framework.h"
 #include "Kismet/KismetSystemLibrary.h"

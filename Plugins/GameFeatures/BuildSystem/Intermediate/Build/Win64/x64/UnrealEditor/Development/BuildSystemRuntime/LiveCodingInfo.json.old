@@ -16,11 +16,11 @@
 			"BuildActor.cpp.obj",
 			"BuildRuntimeComponent.cpp.obj",
 			"BuildSystemRuntimeModule.cpp.obj",
+			"DecorationComponent.cpp.obj",
 			"GameplayDebuggerCategory_BuildSystem.cpp.obj",
 			"BuildRuntimeSubsystem.cpp.obj",
 			"BuildSerializationSubsystem.cpp.obj",
-			"TestStaticMeshComponent.cpp.obj",
-			"DecorationComponent.cpp.obj"
+			"TestStaticMeshComponent.cpp.obj"
 		]
 	}
 }

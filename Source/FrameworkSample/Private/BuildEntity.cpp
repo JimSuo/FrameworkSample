@@ -3,8 +3,8 @@
 
 #include "BuildEntity.h"
 
-#include "FrameworkGameplayDebugger/Macro/HelperMacro.h"
-#include "FrameworkGameplayDebugger/Public/GameplayDebuggerCategory_Framework.h"
+#include "GameplayDebugger/Macro/HelperMacro.h"
+#include "GameplayDebugger/Public/GameplayDebuggerCategory_Framework.h"
 
 
 // Sets default values

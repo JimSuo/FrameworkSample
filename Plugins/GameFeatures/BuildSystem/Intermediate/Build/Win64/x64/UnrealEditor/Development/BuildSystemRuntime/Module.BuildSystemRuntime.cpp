@@ -7,6 +7,8 @@
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Intermediate/Build/Win64/UnrealEditor/Inc/BuildSystemRuntime/UHT/BuildRuntimeComponent.gen.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Intermediate/Build/Win64/UnrealEditor/Inc/BuildSystemRuntime/UHT/BuildRuntimeSubsystem.gen.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Intermediate/Build/Win64/UnrealEditor/Inc/BuildSystemRuntime/UHT/BuildSerializationSubsystem.gen.cpp"
+#include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Intermediate/Build/Win64/UnrealEditor/Inc/BuildSystemRuntime/UHT/BuildSystemRuntime.init.gen.cpp"
+#include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Intermediate/Build/Win64/UnrealEditor/Inc/BuildSystemRuntime/UHT/DecorationComponent.gen.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Intermediate/Build/Win64/UnrealEditor/Inc/BuildSystemRuntime/UHT/TestStaticMeshComponent.gen.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/BuildActor.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/BuildRuntimeComponent.cpp"
