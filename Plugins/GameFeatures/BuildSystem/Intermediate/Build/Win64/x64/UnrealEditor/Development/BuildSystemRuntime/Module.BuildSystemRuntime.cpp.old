@@ -13,7 +13,6 @@
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/BuildActor.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/BuildRuntimeComponent.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/BuildSystemRuntimeModule.cpp"
-#include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/DecorationComponent.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/GameplayDebuggerCategory_BuildSystem.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/Subsystems/BuildRuntimeSubsystem.cpp"
 #include "D:/Documents/UnrealProjects/FrameworkSample/Plugins/GameFeatures/BuildSystem/Source/BuildSystemRuntime/Private/Subsystems/BuildSerializationSubsystem.cpp"
