@@ -3,7 +3,18 @@
 
 #include "PlayerStateViewMode.h"
 
-const FName& UPlayerStateViewMode::GetPlayerNickName() const
+float UPlayerStateViewMode::GetTestFloat() const
+{
+	return TestFloat;
+}
+
+void UPlayerStateViewMode::SetTestFloat(const float& InTestFloat)
+{
+	UE_MVVM_SET_PROPERTY_VALUE(TestFloat, InTestFloat);
+}
+
+
+FName UPlayerStateViewMode::GetPlayerNickName() const
 {
 	return PlayerNickName;	
 }

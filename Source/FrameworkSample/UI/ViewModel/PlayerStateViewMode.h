@@ -6,12 +6,6 @@
 #include "MVVMViewModelBase.h"
 #include "PlayerStateViewMode.generated.h"
 
-#define TEST(propertyType, propertyName, propertyDefaultName)\
-	UPROPERTY(BlueprintReadWrite, FieldNotify, Getter, Setter)\
-	propertyType propertyName = propertyDefaultName;\
-	const propertyType& Get##propertyName() const;\
-	void Set##propertyName(const propertyType& In##propertyName);
-
 /**
  * 玩家状态ViewModel
  */
@@ -21,11 +15,26 @@ class FRAMEWORKSAMPLE_API UPlayerStateViewMode : public UMVVMViewModelBase
 	GENERATED_BODY()
 
 public:
-	// TEST(int32, TestInt, 0)
-
+	/**
+     * @brife 测试用float数据
+     */
+	UPROPERTY(BlueprintReadWrite, FieldNotify, Getter, Setter)
+	float TestFloat;
+	/**
+     * @brife 获取 测试用float数据
+     * @return 测试用float数据
+     */
+	float GetTestFloat() const;
+	/**
+     * @brife 设置 测试用float数据
+     * @param InTestFloat 新传入的 测试用float数据
+     */
+	void SetTestFloat(const float& InTestFloat);
+	
+	
 	UPROPERTY(BlueprintReadWrite, FieldNotify, Getter, Setter)
 	int32 TestInt = 0;
-	const int32& GetTestInt() const { return TestInt; }
+	int32 GetTestInt() const { return TestInt; }
 	
 	void SetTestInt(const int32& InTestInt)
 	{
@@ -38,7 +47,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, FieldNotify, Getter, Setter)
 	FName PlayerNickName = FName(TEXT("Test Player"));
 
-	const FName& GetPlayerNickName() const;
+	FName GetPlayerNickName() const;
 	void SetPlayerNickName(const FName& InPlayerNickName);
 	
 	// /**

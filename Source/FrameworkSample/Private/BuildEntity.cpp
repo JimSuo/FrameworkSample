@@ -3,10 +3,6 @@
 
 #include "BuildEntity.h"
 
-#include "GameplayDebugger/Macro/HelperMacro.h"
-#include "GameplayDebugger/Public/GameplayDebuggerCategory_Framework.h"
-
-
 // Sets default values
 ABuildEntity::ABuildEntity()
 {
@@ -27,23 +23,23 @@ void ABuildEntity::BeginPlay()
 {
 	Super::BeginPlay();
 
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-	ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, TestDebugFunc)
-	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCall"))).
-	// 	BindUObject(
-	// 		this, &ABuildEntity::OnDelegateCall);
-	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCallFuncName"))).
-	// 	BindUFunction(
-	// 		this, "OnDelegateCallFuncName");
-#endif
+// #if WITH_GAMEPLAY_DEBUGGER_MENU
+// 	ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, TestDebugFunc)
+// 	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCall"))).
+// 	// 	BindUObject(
+// 	// 		this, &ABuildEntity::OnDelegateCall);
+// 	// FGameplayDebuggerCategory_Framework::AddOnCollectData(FString::Printf(TEXT("ABuildEntity::OnDelegateCallFuncName"))).
+// 	// 	BindUFunction(
+// 	// 		this, "OnDelegateCallFuncName");
+// #endif
 }
 
 void ABuildEntity::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
-	#if WITH_GAMEPLAY_DEBUGGER_MENU
-    	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, TestDebugFunc)
-    #endif
+	// #if WITH_GAMEPLAY_DEBUGGER_MENU
+ //    	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ABuildEntity, TestDebugFunc)
+ //    #endif
 }
 
 TArray<FString> ABuildEntity::TestDebugFunc()

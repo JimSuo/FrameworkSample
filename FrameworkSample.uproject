@@ -72,10 +72,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "InfinityFramework",
-			"Enabled": true
-		},
-		{
 			"Name": "SlateInsights",
 			"Enabled": true
 		},

@@ -2,6 +2,14 @@
 	"RemapUnityFiles": 
 	{
 		"Module.BuildSystemRuntime.cpp.obj": [
+			"BuildActor.cpp.obj",
+			"BuildRuntimeComponent.cpp.obj",
+			"BuildSystemRuntimeModule.cpp.obj",
+			"DecorationComponent.cpp.obj",
+			"GameplayDebuggerCategory_BuildSystem.cpp.obj",
+			"BuildRuntimeSubsystem.cpp.obj",
+			"BuildSerializationSubsystem.cpp.obj",
+			"TestStaticMeshComponent.cpp.obj",
 			"BuildActor.gen.cpp.obj",
 			"BuildActorData.gen.cpp.obj",
 			"BuildDisplayInfoData.gen.cpp.obj",
@@ -12,15 +20,7 @@
 			"BuildSerializationSubsystem.gen.cpp.obj",
 			"BuildSystemRuntime.init.gen.cpp.obj",
 			"DecorationComponent.gen.cpp.obj",
-			"TestStaticMeshComponent.gen.cpp.obj",
-			"BuildActor.cpp.obj",
-			"BuildRuntimeComponent.cpp.obj",
-			"BuildSystemRuntimeModule.cpp.obj",
-			"GameplayDebuggerCategory_BuildSystem.cpp.obj",
-			"BuildRuntimeSubsystem.cpp.obj",
-			"BuildSerializationSubsystem.cpp.obj",
-			"TestStaticMeshComponent.cpp.obj",
-			"DecorationComponent.cpp.obj"
+			"TestStaticMeshComponent.gen.cpp.obj"
 		]
 	}
 }

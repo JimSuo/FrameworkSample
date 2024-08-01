@@ -23,12 +23,6 @@
       "Name": "slua_profile",
       "Type": "Editor",
       "LoadingPhase": "PreDefault"
-	}
-	],
-	"Plugins": [
-		{
-			"Name": "InfinityFramework",
-			"Enabled": true
-		}
+    }
 	]
 }

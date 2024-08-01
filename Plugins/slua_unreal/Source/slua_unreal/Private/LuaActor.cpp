@@ -1,29 +1,10 @@
 #include "LuaActor.h"
-
-#include "GameplayDebuggerCategory_Framework.h"
 #include "LuaState.h"
-#include "GameplayDebugger/Macro/HelperMacro.h"
 #include "Net/UnrealNetwork.h"
-using namespace slua;
 
 ALuaActor::ALuaActor(const FObjectInitializer& ObjectInitializer)
     : Super(ObjectInitializer)
 {
-    // REG_EXTENSION_METHOD(ALuaActor, "OnGameplayDebugger", &ALuaActor::OnGameplayDebugger_Implementation)
-}
-
-TArray<FString> ALuaActor::K2_OnGameplayDebugger_Implementation()
-{
-    TArray<FString> Arr;
-    return Arr;
-}
-
-void ALuaActor::BeginPlay()
-{
-    Super::BeginPlay();
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-    ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ALuaActor, K2_OnGameplayDebugger)
-#endif
 }
 
 void ALuaActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -34,9 +15,6 @@ void ALuaActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
     {
         UnRegistLuaTick();
     }
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-    REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ALuaActor, K2_OnGameplayDebugger)
-#endif
 }
 
 FString ALuaActor::GetLuaFilePath_Implementation() const

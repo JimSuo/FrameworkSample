@@ -16,7 +16,6 @@ public class FrameworkSample : ModuleRules
 			"InputCore",
 			"slua_unreal",
 			"BuildSystemRuntime",
-			"FrameworkGameplayDebugger"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "slua_unreal", "slua_profile", "ModelViewViewModel", "Slate", "SlateCore", "UMG", "GameplayTags", "GameFeatures", "EnhancedInput" });

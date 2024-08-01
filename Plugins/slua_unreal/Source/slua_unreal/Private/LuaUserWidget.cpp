@@ -13,31 +13,6 @@
 
 #include "LuaUserWidget.h"
 
-#include "GameplayDebuggerCategory_Framework.h"
-#include "GameplayDebugger/Macro/HelperMacro.h"
-
-TArray<FString> ULuaUserWidget::K2_OnGameplayDebugger_Implementation()
-{
-    TArray<FString> Arr;
-    return Arr;
-}
-
-void ULuaUserWidget::NativeConstruct()
-{
-    Super::NativeConstruct();
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-    ADD_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ULuaUserWidget, K2_OnGameplayDebugger)
-#endif
-}
-
-void ULuaUserWidget::NativeDestruct()
-{
-    Super::NativeDestruct();
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-    REMOVE_GAMEPLAY_DEBUG_INFO_BIND_UOBJECT(ULuaUserWidget, K2_OnGameplayDebugger)
-#endif
-}
-
 bool ULuaUserWidget::Initialize()
 {
     bool bIsInited = Super::Initialize();

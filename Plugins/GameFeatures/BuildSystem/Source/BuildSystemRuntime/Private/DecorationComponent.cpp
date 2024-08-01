@@ -3,9 +3,7 @@
 
 #include "DecorationComponent.h"
 
-#include "GameplayDebugger/Macro/HelperMacro.h"
 #include "FrameworkSample/Utils/TransformLibrary.h"
-#include "GameplayDebuggerCategory_Framework.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
@@ -67,14 +65,14 @@ void UDecorationComponent::RotateDecoration()
 void UDecorationComponent::BeginPlay()
 {
 	Super::BeginPlay();
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-	ADD_GAMEPLAY_DEBUG_INFO_BIND_CUSTOM(FName("DecorationComponentInfoLambda")).BindLambda([this]()-> TArray<FString>
-										{
-										TArray<FString> Logs;
-										Logs.Add(GetHandleDecorationName());
-										return Logs;
-										});
-#endif
+// #if WITH_GAMEPLAY_DEBUGGER_MENU
+// 	ADD_GAMEPLAY_DEBUG_INFO_BIND_CUSTOM(FName("DecorationComponentInfoLambda")).BindLambda([this]()-> TArray<FString>
+// 										{
+// 										TArray<FString> Logs;
+// 										Logs.Add(GetHandleDecorationName());
+// 										return Logs;
+// 										});
+// #endif
 }
 
 // Called every frame
@@ -138,9 +136,9 @@ void UDecorationComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 void UDecorationComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
-#if WITH_GAMEPLAY_DEBUGGER_MENU
-	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_CUSTOM(FName("DecorationComponentInfoLambda"))
-#endif
+// #if WITH_GAMEPLAY_DEBUGGER_MENU
+// 	REMOVE_GAMEPLAY_DEBUG_INFO_BIND_CUSTOM(FName("DecorationComponentInfoLambda"))
+// #endif
 }
 
 AActor* UDecorationComponent::TestSetHandleDecoration()
